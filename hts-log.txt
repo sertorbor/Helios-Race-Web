@@ -1,0 +1,48 @@
+HTTrack3.49-5 launched on Thu, 06 Feb 2025 18:52:33 at https://anusolarracing.com/
+(winhttrack https://anusolarracing.com/ -W -O "/home/psd/helios/pruebahtt/HeliosRaceUPV" -P none:8080 -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:53:50	Error: 	"Method Not Allowed" (405) at link https://anusolarracing.com/xmlrpc.php (from https://anusolarracing.com/)
+18:56:37	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4825
+18:56:37	Warning: 	File has moved from https://anusolarracing.com/?p=4825 to https://anusolarracing.com/about/
+18:56:38	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4416
+18:56:38	Warning: 	File has moved from https://anusolarracing.com/?p=4416 to https://anusolarracing.com/teamorigin/team/
+18:56:40	Warning: 	Moved Permanently for https://anusolarracing.com/?p=259
+18:56:40	Warning: 	File has moved from https://anusolarracing.com/?p=259 to https://anusolarracing.com/cars/
+18:56:53	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4582
+18:56:53	Warning: 	File has moved from https://anusolarracing.com/?p=4582 to https://anusolarracing.com/media/
+18:56:58	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4580
+18:56:58	Warning: 	File has moved from https://anusolarracing.com/?p=4580 to https://anusolarracing.com/outreach/
+18:57:10	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4522
+18:57:10	Warning: 	File has moved from https://anusolarracing.com/?p=4522 to https://anusolarracing.com/partners/
+18:57:11	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4578
+18:57:11	Warning: 	File has moved from https://anusolarracing.com/?p=4578 to https://anusolarracing.com/contact-us/
+18:57:18	Warning: 	Moved Permanently for https://anusolarracing.com/?p=2677
+18:57:18	Warning: 	File has moved from https://anusolarracing.com/?p=2677 to https://anusolarracing.com/cars/sc3/
+18:57:18	Error: 	"Not Found" (404) at link https://anusolarracing.com/GET (from https://anusolarracing.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/particles/particles.js?ver=3.0.6)
+18:57:18	Error: 	"Not Found" (404) at link https://anusolarracing.com/Error pJS - No image.src (from https://anusolarracing.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/particles/particles.js?ver=3.0.6)
+18:57:18	Error: 	"Not Found" (404) at link https://anusolarracing.com/Trident/ (from https://anusolarracing.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/jarallax/jarallax.min.js?ver=1.12.7)
+18:57:18	Error: 	"Not Found" (404) at link https://anusolarracing.com/Edge/ (from https://anusolarracing.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/jarallax/jarallax.min.js?ver=1.12.7)
+18:57:18	Error: 	"Not Found" (404) at link https://anusolarracing.com/l (from https://anusolarracing.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5)
+18:57:24	Error: 	"Not Found" (404) at link https://anusolarracing.com/t.params.url (from https://anusolarracing.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5)
+18:57:24	Error: 	"Not Found" (404) at link https://anusolarracing.com/-negative.svg (from https://anusolarracing.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.27.3)
+18:57:24	Error: 	"Not Found" (404) at link https://anusolarracing.com/OPR/ (from https://anusolarracing.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.27.3)
+18:57:24	Error: 	"Not Found" (404) at link https://anusolarracing.com/r (from https://anusolarracing.com/wp-content/plugins/royal-elementor-addons/assets/js/frontend.min.js?ver=1.7.1007)
+18:57:28	Warning: 	Moved Permanently for https://anusolarracing.com/?p=2678
+18:57:28	Warning: 	File has moved from https://anusolarracing.com/?p=2678 to https://anusolarracing.com/cars/sc2/
+18:57:29	Warning: 	Moved Permanently for https://anusolarracing.com/?p=1982
+18:57:29	Warning: 	File has moved from https://anusolarracing.com/?p=1982 to https://anusolarracing.com/cars/sc1/
+18:57:29	Error: 	"Not Found" (404) at link https://anusolarracing.com/wp-content/uploads/2024/09/Screenshot-2024-09-09-at-6.33.22â¯PM.png (from https://anusolarracing.com/wp-content/uploads/elementor/css/post-4580.css?ver=1736322358)
+18:57:29	Error: 	"Not Found" (404) at link https://anusolarracing.com/wp-content/plugins/wpforms-lite/assets/pro/images/times-solid-white.svg (from https://anusolarracing.com/wp-content/plugins/wpforms-lite/assets/css/frontend/classic/wpforms-full.min.css?ver=1.9.3.2)
+18:57:29	Error: 	"Not Found" (404) at link https://anusolarracing.com/contact-us/optusnet.com.au (from https://anusolarracing.com/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js?ver=1.1.2)
+18:57:29	Error: 	"Not Found" (404) at link https://anusolarracing.com/contact-us/com.au (from https://anusolarracing.com/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js?ver=1.1.2)
+18:57:29	Error: 	"Not Found" (404) at link https://anusolarracing.com/contact-us/net.au (from https://anusolarracing.com/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js?ver=1.1.2)
+18:57:29	Warning: 	Moved Permanently for https://anusolarracing.com/?p=4066
+18:57:29	Warning: 	File has moved from https://anusolarracing.com/?p=4066 to https://anusolarracing.com/elementor-4066/
+
+HTTrack Website Copier/3.49-5 mirror complete in 4 minutes 57 seconds : 299 links scanned, 272 files written (103949209 bytes overall) [98982500 bytes received at 333274 bytes/sec], 8296665 bytes transferred using HTTP compression in 152 files, ratio 28%, 7.1 requests per connection
+(15 errors, 22 warnings, 0 messages)
