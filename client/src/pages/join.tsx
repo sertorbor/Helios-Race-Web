@@ -100,7 +100,7 @@ export default function Join() {
               <Button 
                 size="lg"
                 className="button-primary w-full"
-                onClick={() => window.open('YOUR_GOOGLE_FORMS_URL', '_blank')}
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSedJuHKW4hCQqV1TB4QSJQvr5TFFCX7OlC7L_D-3MxDpIyKuw/alreadyresponded', '_blank')}
               >
                 Apply Now
               </Button>

@@ -35,8 +35,8 @@ export default function Contact() {
     },
     onSuccess: () => {
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: "¡Mensaje enviado!",
+        description: "Nos pondremos en contacto contigo lo antes posible",
       });
       form.reset();
     },
@@ -51,10 +51,10 @@ export default function Contact() {
 
   return (
     <div className="py-16 md:py-24">
-      <div className="container max-w-4xl">
+      <div className="container max-w-2xl">
         <SectionHeader
-          title="Contact Us"
-          subtitle="Have questions or want to learn more about HeliosRace UPV? Get in touch with us."
+          title="Contáctanos"
+          subtitle="¿Tienes preguntas o quieres aprender más sobre HeliosRace UPV? ¡Ponte en contacto con nosotros!"
           centered
         />
 
@@ -75,7 +75,7 @@ export default function Contact() {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your name" {...field} />
+                      <Input placeholder="Tu nombre" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -89,7 +89,7 @@ export default function Contact() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your.email@example.com" {...field} />
+                      <Input placeholder="tu.email@ejemplo.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -104,7 +104,7 @@ export default function Contact() {
                     <FormLabel>Message</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Your message..."
+                        placeholder="Tu mensaje..."
                         className="min-h-[150px]"
                         {...field}
                       />
@@ -120,7 +120,7 @@ export default function Contact() {
                 className="w-full"
                 disabled={mutation.isPending}
               >
-                {mutation.isPending ? "Sending..." : "Send Message"}
+                {mutation.isPending ? "Enviando..." : "Mensaje enviado"}
               </Button>
             </form>
           </Form>
