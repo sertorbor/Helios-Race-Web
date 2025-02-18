@@ -83,10 +83,10 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-center">Find Us</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center">Encuéntranos</h3>
           <div className="w-full h-[400px] rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.446563953508!2d-0.3384868!3d39.482055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604883612aa88d%3A0x5aae0e0b7fa0358a!2sUniversitat%20Polit%C3%A8cnica%20de%20Val%C3%A8ncia!5e0!3m2!1sen!2ses!4v1708264721037!5m2!1sen!2ses"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.8761401873059!2d-0.3423264303337206!3d39.48051999822536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6049006994a535%3A0xc6ff399231179898!2sHelios%20Race%20UPV!5e0!3m2!1ses!2ses!4v1739906135629!5m2!1ses!2ses"
               width="100%"
               height="100%"
               style={{ border: 0 }}
