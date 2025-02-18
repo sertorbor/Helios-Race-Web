@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --primary: 48 97% 50%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 48 97% 50%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 48 97% 50%;
+    --input: 240 5.9% 90%;
+    --ring: 48 97% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  .container {
+    @apply px-8 md:px-12 max-w-6xl mx-auto;
+  }
+
+  /* Add yellow accents */
+  .button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-foreground border-b-2 border-primary pb-2 mb-6;
+  }
+}
