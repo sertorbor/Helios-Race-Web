@@ -1,2 +1,0 @@
-# HeliosRaceUPV
-HeliosRaceUPV webpage
