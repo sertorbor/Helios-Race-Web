@@ -36,6 +36,6 @@
   }
 
   .container {
-    @apply px-8 md:px-12;
+    @apply px-8 md:px-12 max-w-6xl mx-auto;
   }
 }
