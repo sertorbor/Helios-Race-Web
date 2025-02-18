@@ -34,24 +34,26 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="bg-primary/10 backdrop-blur-md rounded-lg p-8 max-w-4xl mx-auto">
-      <h3 className="text-2xl font-semibold mb-6 text-center text-white">{t('countdown.title')}</h3>
-      <div className="grid grid-cols-4 gap-8 text-center">
-        <div>
-          <div className="text-4xl font-bold text-primary">{timeLeft.days}</div>
-          <div className="text-sm text-white/80">{t('countdown.days')}</div>
+    <div className="bg-yellow-500 text-black rounded-xl p-6 max-w-xl mx-auto shadow-lg">
+      <h3 className="text-2xl font-bold text-center mb-6 uppercase tracking-wide">
+        2026 Solar Racing Challenge
+      </h3>
+      <div className="flex justify-center gap-6">
+        <div className="bg-white text-black rounded-lg p-6 text-center shadow-lg">
+          <div className="text-5xl font-extrabold">{timeLeft.days}</div>
+          <div className="text-lg font-semibold">{t('countdown.days')}</div>
         </div>
-        <div>
-          <div className="text-4xl font-bold text-primary">{timeLeft.hours}</div>
-          <div className="text-sm text-white/80">{t('countdown.hours')}</div>
+        <div className="bg-white text-black rounded-lg p-6 text-center shadow-lg">
+          <div className="text-5xl font-extrabold">{timeLeft.hours}</div>
+          <div className="text-lg font-semibold">{t('countdown.hours')}</div>
         </div>
-        <div>
-          <div className="text-4xl font-bold text-primary">{timeLeft.minutes}</div>
-          <div className="text-sm text-white/80">{t('countdown.minutes')}</div>
+        <div className="bg-white text-black rounded-lg p-6 text-center shadow-lg">
+          <div className="text-5xl font-extrabold">{timeLeft.minutes}</div>
+          <div className="text-lg font-semibold">{t('countdown.minutes')}</div>
         </div>
-        <div>
-          <div className="text-4xl font-bold text-primary">{timeLeft.seconds}</div>
-          <div className="text-sm text-white/80">{t('countdown.seconds')}</div>
+        <div className="bg-white text-black rounded-lg p-6 text-center shadow-lg">
+          <div className="text-5xl font-extrabold">{timeLeft.seconds}</div>
+          <div className="text-lg font-semibold">{t('countdown.seconds')}</div>
         </div>
       </div>
     </div>
