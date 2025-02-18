@@ -8,7 +8,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative min-h-[80vh] flex items-center">
+    <div className="relative min-h-screen flex flex-col">
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 flex-grow flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,8 +46,75 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-12 left-0 right-0 z-10">
+      <div className="relative z-10 mb-24">
         <Countdown />
+      </div>
+
+      <div className="relative z-10 container pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0 }}
+            className="group"
+          >
+            <Link href="/team">
+              <div className="relative h-64 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                  alt="Our Team"
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <h3 className="text-2xl font-bold text-white">Our Team</h3>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="group"
+          >
+            <Link href="/about">
+              <div className="relative h-64 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
+                  alt="About Us"
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <h3 className="text-2xl font-bold text-white">About Us</h3>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="group"
+          >
+            <Link href="/partners">
+              <div className="relative h-64 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e"
+                  alt="Our Partners"
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <h3 className="text-2xl font-bold text-white">Our Partners</h3>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
