@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <div className="container relative z-10 flex-grow flex items-center">
+      <div className="container relative z-10 flex-grow flex items-center pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
