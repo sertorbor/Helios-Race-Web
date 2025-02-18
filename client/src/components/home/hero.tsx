@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import Countdown from "./countdown";
+import { useLanguage } from "@/lib/use-language";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <div className="relative min-h-[80vh] flex items-center">
       <div 
@@ -16,7 +20,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>
-      
+
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,19 +29,20 @@ export default function Hero() {
           className="max-w-2xl text-white"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Racing Towards a Sustainable Future
+            {t('hero.title')}
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200">
-            HeliosRace UPV is a student-led solar racing team pushing the boundaries of sustainable mobility through innovation and determination.
+            {t('hero.subtitle')}
           </p>
           <div className="flex gap-4">
-            <Button asChild size="lg">
-              <Link href="/about">Learn More</Link>
+            <Button asChild size="lg" className="button-primary">
+              <Link href="/about">{t('hero.learnMore')}</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="/join">Join the Team</Link>
+              <Link href="/join">{t('hero.joinTeam')}</Link>
             </Button>
           </div>
+          <Countdown />
         </motion.div>
       </div>
     </div>

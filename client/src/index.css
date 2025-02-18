@@ -22,7 +22,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
+    --border: 48 97% 50%;
     --input: 240 5.9% 90%;
     --ring: 48 97% 50%;
   }
@@ -37,5 +37,18 @@
 
   .container {
     @apply px-8 md:px-12 max-w-6xl mx-auto;
+  }
+
+  /* Add yellow accents */
+  .button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-foreground border-b-2 border-primary pb-2 mb-6;
   }
 }

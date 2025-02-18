@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/use-language";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -7,55 +8,56 @@ import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeader from "@/components/shared/section-header";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+//import {
+//  Form,
+//  FormControl,
+//  FormField,
+//  FormItem,
+//  FormLabel,
+//  FormMessage,
+//} from "@/components/ui/form";
+//import { Input } from "@/components/ui/input";
+//import { Textarea } from "@/components/ui/textarea";
 
 export default function Join() {
-  const { toast } = useToast();
-  const form = useForm<InsertJoinRequest>({
-    resolver: zodResolver(joinSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      interest: "",
-      experience: "",
-    },
-  });
-
-  const mutation = useMutation({
-    mutationFn: async (data: InsertJoinRequest) => {
-      await apiRequest("POST", "/api/join", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Application submitted!",
-        description: "We'll review your application and get back to you soon.",
-      });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: "Error",
-        description: error.message,
-        variant: "destructive",
-      });
-    },
-  });
+  const { t } = useLanguage();
+  //const { toast } = useToast();
+  //const form = useForm<InsertJoinRequest>({
+  //  resolver: zodResolver(joinSchema),
+  //  defaultValues: {
+  //    name: "",
+  //    email: "",
+  //    interest: "",
+  //    experience: "",
+  //  },
+  //});
+  //
+  //const mutation = useMutation({
+  //  mutationFn: async (data: InsertJoinRequest) => {
+  //    await apiRequest("POST", "/api/join", data);
+  //  },
+  //  onSuccess: () => {
+  //    toast({
+  //      title: "Application submitted!",
+  //      description: "We'll review your application and get back to you soon.",
+  //    });
+  //    form.reset();
+  //  },
+  //  onError: (error) => {
+  //    toast({
+  //      title: "Error",
+  //      description: error.message,
+  //      variant: "destructive",
+  //    });
+  //  },
+  //});
 
   return (
     <div className="py-16 md:py-24">
       <div className="container">
         <SectionHeader
-          title="Join Our Team"
-          subtitle="Be part of the future of sustainable racing technology"
+          title={t('join.title')}
+          subtitle={t('join.subtitle')}
           centered
         />
 
@@ -88,85 +90,21 @@ export default function Join() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center justify-center"
           >
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
-                className="space-y-6"
+            <div className="text-center max-w-md">
+              <h3 className="text-2xl font-bold mb-4">Ready to Join?</h3>
+              <p className="text-muted-foreground mb-8">
+                Apply now through our application form. We're looking forward to meeting you!
+              </p>
+              <Button 
+                size="lg"
+                className="button-primary w-full"
+                onClick={() => window.open('YOUR_GOOGLE_FORMS_URL', '_blank')}
               >
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="interest"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Area of Interest</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="What area of the project interests you the most?"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="experience"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Relevant Experience</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Tell us about your relevant experience and skills..."
-                          className="min-h-[150px]"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full"
-                  disabled={mutation.isPending}
-                >
-                  {mutation.isPending ? "Submitting..." : "Submit Application"}
-                </Button>
-              </form>
-            </Form>
+                Apply Now
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>
