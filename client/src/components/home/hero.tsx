@@ -8,7 +8,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="relative min-h-[90vh] flex flex-col">
       <div className="absolute inset-0 z-0">
         <video
           autoPlay

@@ -34,8 +34,8 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="bg-yellow-500 text-black rounded-xl p-6 max-w-xl mx-auto shadow-lg">
-      <h3 className="text-2xl font-bold text-center mb-6 uppercase tracking-wide">
+    <div className="bg-yellow-500 text-black rounded-xl p-6 max-w-xl ml-12 shadow-lg -mt-20">
+      <h3 className="text-2xl font-extrabold text-center mb-6 uppercase tracking-wide">
         2026 Solar Racing Challenge
       </h3>
       <div className="flex justify-center gap-6">
