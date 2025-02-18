@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useLanguage } from '@/lib/use-language';
 
 export default function Countdown() {
+  const { t } = useLanguage();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -32,24 +34,24 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="bg-primary/10 rounded-lg p-6 mt-8">
-      <h3 className="text-xl font-semibold mb-4 text-center">Time Until Race Day</h3>
-      <div className="grid grid-cols-4 gap-4 text-center">
+    <div className="bg-primary/10 backdrop-blur-md rounded-lg p-8 max-w-4xl mx-auto">
+      <h3 className="text-2xl font-semibold mb-6 text-center text-white">{t('countdown.title')}</h3>
+      <div className="grid grid-cols-4 gap-8 text-center">
         <div>
-          <div className="text-3xl font-bold text-primary">{timeLeft.days}</div>
-          <div className="text-sm text-muted-foreground">Days</div>
+          <div className="text-4xl font-bold text-primary">{timeLeft.days}</div>
+          <div className="text-sm text-white/80">{t('countdown.days')}</div>
         </div>
         <div>
-          <div className="text-3xl font-bold text-primary">{timeLeft.hours}</div>
-          <div className="text-sm text-muted-foreground">Hours</div>
+          <div className="text-4xl font-bold text-primary">{timeLeft.hours}</div>
+          <div className="text-sm text-white/80">{t('countdown.hours')}</div>
         </div>
         <div>
-          <div className="text-3xl font-bold text-primary">{timeLeft.minutes}</div>
-          <div className="text-sm text-muted-foreground">Minutes</div>
+          <div className="text-4xl font-bold text-primary">{timeLeft.minutes}</div>
+          <div className="text-sm text-white/80">{t('countdown.minutes')}</div>
         </div>
         <div>
-          <div className="text-3xl font-bold text-primary">{timeLeft.seconds}</div>
-          <div className="text-sm text-muted-foreground">Seconds</div>
+          <div className="text-4xl font-bold text-primary">{timeLeft.seconds}</div>
+          <div className="text-sm text-white/80">{t('countdown.seconds')}</div>
         </div>
       </div>
     </div>

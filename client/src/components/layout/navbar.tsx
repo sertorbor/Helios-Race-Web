@@ -1,10 +1,11 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Globe } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/lib/use-language";
+import { ES, GB } from 'country-flag-icons/react/3x2';
 
 const navLinks = [
   { href: "/about", label: "nav.about" },
@@ -24,6 +25,8 @@ export default function Navbar() {
     setLanguage(language === 'en' ? 'es' : 'en');
   };
 
+  const FlagIcon = language === 'en' ? GB : ES;
+
   const NavLinks = () => (
     <>
       {navLinks.map((link) => (
@@ -41,7 +44,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between px-12">
+      <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <img 
             src="/logo.svg" 
@@ -61,7 +64,7 @@ export default function Navbar() {
               <nav className="flex flex-col gap-2 mt-4">
                 <NavLinks />
                 <Button variant="ghost" onClick={toggleLanguage} className="gap-2">
-                  <Globe className="h-4 w-4" />
+                  <FlagIcon className="h-4 w-4" />
                   {language.toUpperCase()}
                 </Button>
               </nav>
@@ -73,7 +76,7 @@ export default function Navbar() {
               <NavLinks />
             </nav>
             <Button variant="ghost" onClick={toggleLanguage} className="gap-2">
-              <Globe className="h-4 w-4" />
+              <FlagIcon className="h-4 w-4" />
               {language.toUpperCase()}
             </Button>
           </div>

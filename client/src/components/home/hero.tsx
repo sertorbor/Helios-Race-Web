@@ -9,15 +9,16 @@ export default function Hero() {
 
   return (
     <div className="relative min-h-[80vh] flex items-center">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1559302504-64aae6ca6b6d')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="YOUR_VIDEO_URL" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
@@ -42,8 +43,11 @@ export default function Hero() {
               <Link href="/join">{t('hero.joinTeam')}</Link>
             </Button>
           </div>
-          <Countdown />
         </motion.div>
+      </div>
+
+      <div className="absolute bottom-12 left-0 right-0 z-10">
+        <Countdown />
       </div>
     </div>
   );
