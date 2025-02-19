@@ -31,7 +31,9 @@ export default function Navbar() {
         {/* Logo con tipografía elegante */}
         <Link href="/" className="flex items-center space-x-3">
           <img src={logo} alt="HeliosRace UPV Logo" className="h-10 w-auto" />
-          <span className="text-xl font-extrabold tracking-wide text-white uppercase">Helios Race UPV</span>
+          <span className="text-xl font-extrabold tracking-wide text-white uppercase">
+            Helios Race UPV
+          </span>
         </Link>
 
         {/* Menú de navegación */}
@@ -48,14 +50,24 @@ export default function Navbar() {
                   <Link key={link.href} href={link.href}>
                     <Button
                       variant={location === link.href ? "secondary" : "ghost"}
-                      className="w-full text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                      className={`w-full text-lg font-semibold transition-all duration-300 hover:scale-105 
+                        ${
+                          location === link.href
+                            ? "bg-gray-800 text-blue-400" // Página activa en azul
+                            : "text-gray-300 hover:text-black" // Hover cambia a negro
+                        }
+                      `}
                     >
                       {t(link.label)}
                     </Button>
                   </Link>
                 ))}
                 {/* Botón de cambio de idioma */}
-                <Button variant="ghost" onClick={toggleLanguage} className="flex items-center gap-2 text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">
+                <Button
+                  variant="ghost"
+                  onClick={toggleLanguage}
+                  className="flex items-center gap-2 text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                >
                   <FlagIcon className="h-5 w-5" />
                   {language.toUpperCase()}
                 </Button>
@@ -68,8 +80,14 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <Button
-                    variant={location === link.href ? "secondary" : "ghost"}
-                    className="text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                    variant="ghost"
+                    className={`text-lg font-semibold transition-all duration-300 hover:scale-105 
+                      ${
+                        location === link.href
+                          ? "bg-gray-800 text-blue-400" // Página activa en azul
+                          : "text-gray-300 hover:text-black" // Hover cambia a negro
+                      }
+                    `}
                   >
                     {t(link.label)}
                   </Button>
@@ -77,7 +95,11 @@ export default function Navbar() {
               ))}
             </nav>
             {/* Botón de cambio de idioma */}
-            <Button variant="ghost" onClick={toggleLanguage} className="flex items-center gap-2 text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">
+            <Button
+              variant="ghost"
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+            >
               <FlagIcon className="h-5 w-5" />
               {language.toUpperCase()}
             </Button>
