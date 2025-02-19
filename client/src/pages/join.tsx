@@ -8,6 +8,8 @@ import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeader from "@/components/shared/section-header";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/enseñarniño.jpg";
+import logo2 from "@/assets/trespose.jpg";
 //import {
 //  Form,
 //  FormControl,
@@ -71,12 +73,12 @@ export default function Join() {
 
           <div className="mt-8 py-16 md:py-24 flex items-center justify-center">
             <img
-              src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e"
+              src={logo}
               alt="Team collaboration 1"
               className="rounded-lg max-w-xl mr-4"
             />
             <img
-              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+              src={logo2}
               alt="Team collaboration 2"
               className="rounded-lg max-w-xl"
             />
