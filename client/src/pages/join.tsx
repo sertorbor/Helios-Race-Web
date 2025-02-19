@@ -53,7 +53,7 @@ export default function Join() {
   //});
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="py-16 md:py-24 mx-auto">
       <div className="container">
         <SectionHeader
           title={t('join.title')}
@@ -61,29 +61,26 @@ export default function Join() {
           centered
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Why Join Us?</h3>
-            <ul className="space-y-4 text-muted-foreground">
-              <li>• Hands-on experience with cutting-edge technology</li>
-              <li>• Work with a passionate team of engineers</li>
-              <li>• Participate in international competitions</li>
-              <li>• Develop practical engineering skills</li>
-              <li>• Make a real impact on sustainable technology</li>
-              <li>• Network with industry professionals</li>
-            </ul>
 
-            <div className="mt-8">
-              <img
-                src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e"
-                alt="Team collaboration"
-                className="rounded-lg"
-              />
-            </div>
+
+          <div className="mt-8 py-16 md:py-24 flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e"
+              alt="Team collaboration 1"
+              className="rounded-lg max-w-xl mr-4"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+              alt="Team collaboration 2"
+              className="rounded-lg max-w-xl"
+            />
+          </div>
           </motion.div>
 
           <motion.div
@@ -93,16 +90,16 @@ export default function Join() {
             className="flex flex-col items-center justify-center"
           >
             <div className="text-center max-w-md">
-              <h3 className="text-2xl font-bold mb-4">Ready to Join?</h3>
-              <p className="text-muted-foreground mb-8">
-                Apply now through our application form. We're looking forward to meeting you!
-              </p>
+              <h3 className="text-2xl font-bold mb-4">¿Quieres unirte?</h3>
+                <p className="text-muted-foreground mb-8">
+                Si te apasiona la tecnología, la innovación y el automovilismo, ¡únete! Trabaja con nosotros de cerca para desarrollar un sistema de propulsión sostenible y eficiente. ¡Te esperamos!
+                </p>
               <Button 
                 size="lg"
                 className="button-primary w-full"
                 onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSedJuHKW4hCQqV1TB4QSJQvr5TFFCX7OlC7L_D-3MxDpIyKuw/alreadyresponded', '_blank')}
               >
-                Apply Now
+                Apúntate
               </Button>
             </div>
           </motion.div>
