@@ -33,7 +33,7 @@ export default function Partners() {
   ];
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="flex justify-center py-16 md:py-24">
       <div className="container">
         <SectionHeader
           title="Our Partners"
