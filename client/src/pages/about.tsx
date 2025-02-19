@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
 
+
 export default function About() {
   const { t } = useLanguage();
 
