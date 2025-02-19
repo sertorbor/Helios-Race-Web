@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/lib/use-language";
 import { ES, GB } from 'country-flag-icons/react/3x2';
-import logo from "@/assets/logo_blue.png";
+import logo from "@/assets/HeliosLogoBlancoSolo.png";
 
 const navLinks = [
   { href: "/about", label: "nav.about" },
@@ -48,18 +48,17 @@ export default function Navbar() {
               <nav className="flex flex-col gap-4 mt-6">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
-                    <Button
-                      variant={location === link.href ? "secondary" : "ghost"}
-                      className={`w-full text-lg font-semibold transition-all duration-300 hover:scale-105 
+                    <span
+                      className={`cursor-pointer text-lg font-semibold transition-all duration-300 hover:scale-105 
                         ${
                           location === link.href
-                            ? "bg-gray-800 text-blue-400" // Página activa en azul
-                            : "text-gray-300 hover:text-black" // Hover cambia a negro
+                            ? "text-yellow-400" // Página activa en amarillo sin fondo
+                            : "text-gray-300 hover:text-yellow-300" // Hover cambia a amarillo claro
                         }
                       `}
                     >
                       {t(link.label)}
-                    </Button>
+                    </span>
                   </Link>
                 ))}
                 {/* Botón de cambio de idioma */}
@@ -79,18 +78,17 @@ export default function Navbar() {
             <nav className="flex items-center space-x-6">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
-                  <Button
-                    variant="ghost"
-                    className={`text-lg font-semibold transition-all duration-300 hover:scale-105 
+                  <span
+                    className={`cursor-pointer text-lg font-semibold transition-all duration-300 hover:scale-105 
                       ${
                         location === link.href
-                          ? "bg-gray-800 text-blue-400" // Página activa en azul
-                          : "text-gray-300 hover:text-black" // Hover cambia a negro
+                          ? "text-yellow-400" // Página activa en amarillo sin fondo
+                          : "text-gray-300 hover:text-yellow-300" // Hover cambia a amarillo claro
                       }
                     `}
                   >
                     {t(link.label)}
-                  </Button>
+                  </span>
                 </Link>
               ))}
             </nav>
