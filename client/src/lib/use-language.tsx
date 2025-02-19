@@ -55,7 +55,7 @@ const translations = {
     'nav.partners': 'Partners',
     'nav.contact': 'Contacto',
     'nav.join': 'Únete',
-    'hero.title': 'Corriendo Hacia un Futuro Sostenible',
+    'hero.title': 'Acelerando Hacia un Futuro Sostenible',
     'hero.subtitle': 'Helios Race UPV es un equipo estudiantil de carreras solares que impulsa los límites de la movilidad sostenible a través de la innovación y la determinación.',
     'hero.learnMore': 'Conoce Más',
     'hero.joinTeam': 'Únete al Equipo',
