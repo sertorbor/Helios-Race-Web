@@ -74,11 +74,11 @@ export default function Hero() {
               <Link href="/about">{t("hero.learnMore")}</Link>
             </Button>
 
-            {/* Botón "Únete al Equipo" corregido */}
+            {/* Botón "Únete al Equipo" - Transparente con hover blanco */}
             <Button
               asChild
               size="lg"
-              className="font-bold bg-white text-black border border-gray-300 hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+              className="font-bold border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               <Link href="/join">{t("hero.joinTeam")}</Link>
             </Button>
