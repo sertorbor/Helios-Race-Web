@@ -29,7 +29,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-2xl text-white"
+          className="max-w-2xl text-white text-left"
         >
           {/* Título con efecto de aparición */}
           <motion.h1
@@ -38,48 +38,55 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-6xl font-extrabold text-white drop-shadow-lg tracking-wide mb-6"
           >
-            {t('hero.title')}
+            {t("hero.title")}
           </motion.h1>
 
-          {/* Subtítulo con transición suave */}
+          {/* Subtítulo con traducción dinámica y formato de colores */}
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed"
-          >
-            Driving the next generation of <span className="text-yellow-300 font-semibold">solar-powered mobility </span>  
-            with a commitment to <span className="text-yellow-300 font-semibold">sustainable innovation</span> and cutting-edge technology.
-          </motion.p>
+            dangerouslySetInnerHTML={{
+              __html: t("hero.subtitle")
+                .replace("solar-powered mobility", `<span class="text-yellow-300 font-semibold">solar-powered mobility</span>`)
+                .replace("sustainable innovation", `<span class="text-yellow-300 font-semibold">sustainable innovation</span>`)
+                .replace("movilidad solar", `<span class="text-yellow-300 font-semibold">movilidad solar</span>`)
+                .replace("innovación sostenible", `<span class="text-yellow-300 font-semibold">innovación sostenible</span>`)
+                .replace(" a", " a<br>") // Salto de línea después de "a"
+                .replace("compromiso", "compromiso<br>") // Salto de línea después de "compromiso"
+            }}
+          />
 
-          {/* Botones sin sombras en hover */}
+          {/* Botones de acción corregidos */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex gap-4"
           >
+            {/* Botón "Conoce Más" */}
             <Button
               asChild
               size="lg"
-              className="font-bold button-primary bg-yellow-500 text-black transition-all duration-300 transform hover:scale-105 hover:shadow-none"
+              className="font-bold bg-yellow-500 text-black hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="/about">{t('hero.learnMore')}</Link>
+              <Link href="/about">{t("hero.learnMore")}</Link>
             </Button>
 
+            {/* Botón "Únete al Equipo" corregido */}
             <Button
               asChild
-              variant="secondary"
               size="lg"
-              className="font-bold bg-transparent border border-white text-white transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-black hover:shadow-none"
+              className="font-bold bg-white text-black border border-gray-300 hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="/join">{t('hero.joinTeam')}</Link>
+              <Link href="/join">{t("hero.joinTeam")}</Link>
             </Button>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Contador de tiempo con margen mejorado */}
+      {/* Contador de cuenta regresiva */}
       <div className="relative z-10 mb-10">
         <Countdown />
       </div>
