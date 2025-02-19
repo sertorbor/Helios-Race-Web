@@ -29,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-2xl text-white"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-6xl font-extrabold text-white-400 drop-shadow-lg tracking-wide mb-6"> 
             {t('hero.title')}
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200">
