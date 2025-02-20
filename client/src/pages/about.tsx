@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
-
+import mision from "@/assets/trespose.jpg"
 
 export default function About() {
   const { t } = useLanguage();
@@ -11,8 +11,9 @@ export default function About() {
       <div className="container">
         <SectionHeader
           title={t('about.title')}
-          subtitle={t('about.subtitle')}
         />
+        <p className= "text-muted-foreground">
+          Pioneros en movilidad sostenible a través de la innovación en carreras solares </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
@@ -38,7 +39,7 @@ export default function About() {
             className="relative h-[400px] rounded-lg overflow-hidden"
           >
             <img
-              src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
+              src={mision}
               alt="Solar Racing Car"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -64,10 +65,10 @@ export default function About() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1.5 }}
             className="md:order-2 order-1"
           >
-            <h3 className="text-2xl font-bold mb-4">Innovation & Sustainability</h3>
+            <h3 className="text-2xl font-bold mb-4">Visión</h3>
             <p className="text-muted-foreground mb-6">
               Our team constantly pushes technological boundaries, developing cutting-edge solutions in solar power, aerodynamics, and lightweight materials.
             </p>
@@ -78,34 +79,34 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative h-[400px] rounded-lg overflow-hidden md:order-1 order-2"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
-              alt="Team Working"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </motion.div>
-
-          <motion.div
+        <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:order-2 order-1"
+            transition={{ duration: 1.5 }}
+            className="md:order-1 order-2"
           >
-            <h3 className="text-2xl font-bold mb-4">Innovation & Sustainability</h3>
+            <h3 className="text-2xl font-bold mb-4">Valores</h3>
             <p className="text-muted-foreground mb-6">
               Our team constantly pushes technological boundaries, developing cutting-edge solutions in solar power, aerodynamics, and lightweight materials.
             </p>
             <p className="text-muted-foreground">
               Every project we undertake is guided by our commitment to environmental sustainability and the advancement of clean energy technologies.
             </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+            className="relative h-[400px] rounded-lg overflow-hidden md:order-2 order-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+              alt="Team Working"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </motion.div>
         </div>
 
@@ -116,8 +117,8 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-center">Encuéntranos</h3>
-          <div className="w-full h-[400px] rounded-lg overflow-hidden">
+          <h3 className="text-2xl font-bold mb-6 text-center">Encuéntranos aquí</h3>
+          <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.8761401873059!2d-0.3423264303337206!3d39.48051999822536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6049006994a535%3A0xc6ff399231179898!2sHelios%20Race%20UPV!5e0!3m2!1ses!2ses!4v1739906135629!5m2!1ses!2ses"
               width="100%"
