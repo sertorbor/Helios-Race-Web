@@ -3,31 +3,32 @@ import SectionHeader from "@/components/shared/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import logo from "@/assets/logo_blue.png";
 
 export default function Partners() {
   const partners = [
     {
       category: "Academic Partners",
       items: [
-        { name: "Universitat Politècnica de València", role: "Main Academic Institution" },
-        { name: "Engineering Department", role: "Technical Support" },
-        { name: "Research Labs", role: "Testing Facilities" }
+        { name: "Universitat Politècnica de València", role: "Main Academic Institution", image: logo },
+        { name: "Engineering Department", role: "Technical Support", image: logo },
+        { name: "Research Labs", role: "Testing Facilities", image: logo }
       ]
     },
     {
       category: "Industry Partners",
       items: [
-        { name: "Solar Tech Industries", role: "Solar Panel Technology" },
-        { name: "Advanced Materials Corp", role: "Composite Materials" },
-        { name: "Power Systems Ltd", role: "Battery Technology" }
+        { name: "Solar Tech Industries", role: "Solar Panel Technology", image: logo },
+        { name: "Advanced Materials Corp", role: "Composite Materials", image: logo },
+        { name: "Power Systems Ltd", role: "Battery Technology", image: logo }
       ]
     },
     {
       category: "Support Partners",
       items: [
-        { name: "Local Government", role: "Infrastructure Support" },
-        { name: "Sustainability Foundation", role: "Environmental Guidance" },
-        { name: "Innovation Hub", role: "Technical Resources" }
+        { name: "Local Government", role: "Infrastructure Support", image: logo },
+        { name: "Sustainability Foundation", role: "Environmental Guidance", image: logo },
+        { name: "Innovation Hub", role: "Technical Resources", image: logo }
       ]
     }
   ];
@@ -55,7 +56,16 @@ export default function Partners() {
                 {section.items.map((partner, index) => (
                   <Card key={index}>
                     <CardContent className="pt-6">
-                      <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
+                    <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
+                    {partner.image && (
+                        <div className="mb-4 flex justify-center my-6">
+                          <img 
+                            src={partner.image} 
+                            alt={partner.name} 
+                            className="h-24 w-auto object-contain"
+                          />
+                        </div>
+                      )}                      
                       <p className="text-muted-foreground mb-4">{partner.role}</p>
                     </CardContent>
                   </Card>
@@ -74,7 +84,7 @@ export default function Partners() {
         >
           <h3 className="text-2xl font-bold mb-4">Únete a nuestros Partners</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            ¿Quieres colaborar con HeliosRaceUPV?. Sé nuestro partner y forma parte del futuro de las competiciones solares.
+            ¿Quieres colaborar con HeliosRaceUPV? Sé nuestro partner y forma parte del futuro de las competiciones solares.
           </p>
           <Button asChild size="lg">
             <Link href="/contact">Contáctanos</Link>
