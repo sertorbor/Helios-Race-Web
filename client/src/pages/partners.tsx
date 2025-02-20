@@ -44,7 +44,7 @@ export default function Partners() {
               <h3 className="text-2xl font-bold mb-6">{section.category}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {section.items.map((partner, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
                     <CardContent className="pt-6">
                     <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
                     {partner.image && (

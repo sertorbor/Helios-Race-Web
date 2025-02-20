@@ -9,24 +9,29 @@ const teamMembers = [
     role: "Project Director",
   },
   {
-    name: "Engineering Lead",
-    role: "Technical Director",
+    name: "David Grueso Conejero",
+    role: "Telemetry Engineer",
+    linkedin: "#"
   },
   {
-    name: "Design Lead",
-    role: "Aerodynamics Specialist",
+    name: "Sergio Tortosa Borrell",
+    role: "Telemetry Engineer",
+    linkedin: "#"
   },
   {
     name: "Power Systems",
     role: "Solar Technology Expert",
+    linkedin: "#"
   },
   {
     name: "Mechanical Lead",
     role: "Structural Engineer",
+    linkedin: "#"
   },
   {
     name: "Operations Lead",
     role: "Project Manager",
+    linkedin: "#"
   }
 ];
 
@@ -54,21 +59,28 @@ export default function Team() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden text-center">
-                <div className="pt-6 px-6">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                    <img
-                      src={placeholderImage}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
+              <a 
+                href={member.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block transition-transform hover:scale-105"
+              >
+                <Card className="overflow-hidden text-center cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
+                  <div className="pt-6 px-6">
+                    <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                      <img
+                        src={placeholderImage}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-                <CardContent className="pt-4">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-muted-foreground">{member.role}</p>
-                </CardContent>
-              </Card>
+                  <CardContent className="pt-4">
+                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                    <p className="text-muted-foreground">{member.role}</p>
+                  </CardContent>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>
