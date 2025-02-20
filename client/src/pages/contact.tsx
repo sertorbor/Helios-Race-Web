@@ -50,8 +50,25 @@ export default function Contact() {
   });
 
   return (
-    <div className="py-16 md:py-24">
-      <div className="container max-w-2xl">
+    <div className="py-16 md:py-24 relative overflow-hidden">
+      {/* Imagen izquierda */}
+      <div className="absolute -left-48 -top-48 w-96 h-96 transform -rotate-45 opacity-100">
+        <img
+          src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
+          alt="Decorative left"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Imagen derecha */}
+      <div className="absolute -right-48 -bottom-48 w-96 h-96 transform rotate-45 opacity-100">
+        <img
+          src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
+          alt="Decorative right"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Contenido central */}
+      <div className="container max-w-4xl relative z-10">
         <SectionHeader
           title="Contáctanos"
           subtitle="¿Tienes preguntas o quieres aprender más sobre HeliosRace UPV? ¡Ponte en contacto con nosotros!"
@@ -66,7 +83,7 @@ export default function Contact() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
-              className="space-y-6"
+              className="space-y-6 "
             >
               <FormField
                 control={form.control}
@@ -75,7 +92,9 @@ export default function Contact() {
                   <FormItem>
                     <FormLabel>Nombre</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tu nombre" {...field} />
+                      <Input placeholder="Tu nombre" 
+                      className="shadow-lg hover:shadow-xl"
+                      {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -89,7 +108,9 @@ export default function Contact() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="tu.email@ejemplo.com" {...field} />
+                      <Input placeholder="tu.email@ejemplo.com" 
+                      className="shadow-lg hover:shadow-xl"
+                      {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,7 +126,7 @@ export default function Contact() {
                     <FormControl>
                       <Textarea
                         placeholder="Tu mensaje..."
-                        className="min-h-[150px]"
+                        className="min-h-[150px] shadow-lg hover:shadow-xl"
                         {...field}
                       />
                     </FormControl>
