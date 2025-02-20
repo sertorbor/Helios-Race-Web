@@ -33,11 +33,11 @@ export default function Partners() {
   ];
 
   return (
-    <div className="flex justify-center py-16 md:py-24">
+    <div className="flex justify-center py-16 md:py-24 ">
       <div className="container">
         <SectionHeader
-          title="Our Partners"
-          subtitle="Collaboration is key to our success. Meet the organizations that support our mission."
+          title="Nuestros Partners"
+          subtitle="La colaboración es la clave del éxito. Conoce a nuestros partners, quienes hacen realidad este proyecto."
           centered
         />
 
@@ -72,12 +72,12 @@ export default function Partners() {
           transition={{ duration: 0.6 }}
           className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">Become a Partner</h3>
+          <h3 className="text-2xl font-bold mb-4">Únete a nuestros Partners</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Join us in our mission to advance sustainable transportation technology. Partner with HeliosRace UPV and be part of the future of solar racing.
+            ¿Quieres colaborar con HeliosRaceUPV?. Sé nuestro partner y forma parte del futuro de las competiciones solares.
           </p>
           <Button asChild size="lg">
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact">Contáctanos</Link>
           </Button>
         </motion.div>
       </div>
