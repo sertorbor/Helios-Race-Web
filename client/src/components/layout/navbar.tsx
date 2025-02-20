@@ -41,7 +41,7 @@ export default function Navbar() {
                 <Menu className="h-6 w-6 text-white transition-transform duration-300 hover:scale-110" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-[260px] sm:w-[320px] bg-[#1a1f2e] text-white">
+            <SheetContent className="w-[260px] sm:w-[320px] bg-[#1a1f2e] text-white ">
               <nav className="flex flex-col gap-4 mt-6">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
@@ -71,8 +71,13 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         ) : (
+<<<<<<< HEAD
           <div className="flex items-center gap-6">
             <nav className="flex items-center space-x-8">
+=======
+          <div className="flex items-center gap-6 ">
+            <nav className="flex items-center space-x-6">
+>>>>>>> fd988c8c7bffe6cced48aaff4095ec72512fdd88
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span

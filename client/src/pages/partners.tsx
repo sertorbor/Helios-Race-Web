@@ -55,6 +55,7 @@ export default function Partners() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {section.items.map((partner, index) => (
+<<<<<<< HEAD
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -66,6 +67,13 @@ export default function Partners() {
                     <Card className="border border-gray-300 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-2xl hover:scale-105">
                       <CardContent className="pt-6 flex flex-col items-center">
                         <div className="mb-4 flex justify-center my-4 p-4">
+=======
+                  <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
+                    <CardContent className="pt-6">
+                    <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
+                    {partner.image && (
+                        <div className="mb-4 flex justify-center my-6">
+>>>>>>> fd988c8c7bffe6cced48aaff4095ec72512fdd88
                           <img 
                             src={partner.image} 
                             alt={partner.name} 
