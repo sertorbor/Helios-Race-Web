@@ -3,32 +3,22 @@ import SectionHeader from "@/components/shared/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import logoUPV from "@/assets/LOGOUPV.png";
+import logoGE from "@/assets/LOGOGE.png";
 import logo from "@/assets/logo_blue.png";
+import logoFord from "@/assets/LOGOFORD.png";
+import logoWurth from "@/assets/LOGOWURTH.png";
 
 export default function Partners() {
   const partners = [
     {
       category: "Academic Partners",
       items: [
-        { name: "Universitat Politècnica de València", role: "Main Academic Institution", image: logo },
-        { name: "Engineering Department", role: "Technical Support", image: logo },
-        { name: "Research Labs", role: "Testing Facilities", image: logo }
-      ]
-    },
-    {
-      category: "Industry Partners",
-      items: [
-        { name: "Solar Tech Industries", role: "Solar Panel Technology", image: logo },
-        { name: "Advanced Materials Corp", role: "Composite Materials", image: logo },
-        { name: "Power Systems Ltd", role: "Battery Technology", image: logo }
-      ]
-    },
-    {
-      category: "Support Partners",
-      items: [
-        { name: "Local Government", role: "Infrastructure Support", image: logo },
-        { name: "Sustainability Foundation", role: "Environmental Guidance", image: logo },
-        { name: "Innovation Hub", role: "Technical Resources", image: logo }
+        { name: "Universitat Politècnica de València", image: logoUPV },
+        { name: "Generación Espontánea", image: logoGE },
+        { name: "Autoprieto", image: logo },
+        { name: "Ford", image: logoFord },
+        { name: "Würth EleKtronik", image: logoWurth }
       ]
     }
   ];
@@ -52,7 +42,7 @@ export default function Partners() {
               transition={{ duration: 0.6, delay: sectionIndex * 0.2 }}
             >
               <h3 className="text-2xl font-bold mb-6">{section.category}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {section.items.map((partner, index) => (
                   <Card key={index}>
                     <CardContent className="pt-6">
@@ -66,7 +56,6 @@ export default function Partners() {
                           />
                         </div>
                       )}                      
-                      <p className="text-muted-foreground mb-4">{partner.role}</p>
                     </CardContent>
                   </Card>
                 ))}
