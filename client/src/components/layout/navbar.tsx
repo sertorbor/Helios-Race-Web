@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/lib/use-language";
 import { ES, GB } from 'country-flag-icons/react/3x2';
-import logo from "@/assets/logo_blue.png";
+import logo from "@/assets/HeliosLogoBlancoSolo.png";
 
 const navLinks = [
   { href: "/about", label: "nav.about" },
@@ -25,13 +25,12 @@ export default function Navbar() {
   const FlagIcon = language === 'en' ? GB : ES;
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#1a1f2e] bg-gradient-to-b from-[#1a1f2e] to-[#121620] backdrop-blur-md shadow-md transition-all duration-300">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#2a2f3d] to-[#121620] backdrop-blur-md shadow-md transition-all duration-300">
+      <div className="container flex h-[74px] items-center justify-between">
         
-        {/* Logo con tipografía elegante */}
+        {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
-          <img src={logo} alt="HeliosRace UPV Logo" className="h-10 w-auto" />
-          <span className="text-xl font-extrabold tracking-wide text-white uppercase">Helios Race UPV</span>
+          <img src={logo} alt="HeliosRace UPV Logo" className="h-[60px] w-auto" />
         </Link>
 
         {/* Menú de navegación */}
@@ -46,16 +45,25 @@ export default function Navbar() {
               <nav className="flex flex-col gap-4 mt-6">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
-                    <Button
-                      variant={location === link.href ? "secondary" : "ghost"}
-                      className="w-full text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                    <span
+                      className={`cursor-pointer text-xl font-semibold transition-all duration-300 hover:scale-105 font-inter relative 
+                        ${
+                          location === link.href
+                            ? "text-yellow-400 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[3px] after:bg-yellow-400"
+                            : "text-gray-300 hover:text-yellow-300"
+                        }
+                      `}
                     >
                       {t(link.label)}
-                    </Button>
+                    </span>
                   </Link>
                 ))}
                 {/* Botón de cambio de idioma */}
-                <Button variant="ghost" onClick={toggleLanguage} className="flex items-center gap-2 text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">
+                <Button
+                  variant="ghost"
+                  onClick={toggleLanguage}
+                  className="flex items-center gap-2 text-xl font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                >
                   <FlagIcon className="h-5 w-5" />
                   {language.toUpperCase()}
                 </Button>
@@ -64,29 +72,35 @@ export default function Navbar() {
           </Sheet>
         ) : (
           <div className="flex items-center gap-6">
-            <nav className="flex items-center space-x-6">
+            <nav className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
-                  <Button
-                    variant={location === link.href ? "secondary" : "ghost"}
-                    className="text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                  <span
+                    className={`cursor-pointer text-xl font-semibold transition-all duration-300 hover:scale-105 font-inter relative
+                      ${
+                        location === link.href
+                          ? "text-yellow-400 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[3px] after:bg-yellow-400"
+                          : "text-gray-300 hover:text-yellow-300"
+                      }
+                    `}
                   >
                     {t(link.label)}
-                  </Button>
+                  </span>
                 </Link>
               ))}
             </nav>
             {/* Botón de cambio de idioma */}
-            <Button variant="ghost" onClick={toggleLanguage} className="flex items-center gap-2 text-lg font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">
-              <FlagIcon className="h-5 w-5" />
+            <Button
+              variant="ghost"
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 text-xl font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+            >
+              <FlagIcon className="h-6 w-6" />
               {language.toUpperCase()}
             </Button>
           </div>
         )}
       </div>
-
-      {/* Línea amarilla con sombra debajo del navbar */}
-      <div className="w-full h-1 bg-yellow-500 shadow-md shadow-yellow-500/50"></div>
     </header>
   );
 }
