@@ -71,13 +71,8 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         ) : (
-<<<<<<< HEAD
           <div className="flex items-center gap-6">
             <nav className="flex items-center space-x-8">
-=======
-          <div className="flex items-center gap-6 ">
-            <nav className="flex items-center space-x-6">
->>>>>>> fd988c8c7bffe6cced48aaff4095ec72512fdd88
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span
