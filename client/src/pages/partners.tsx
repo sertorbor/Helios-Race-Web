@@ -12,7 +12,6 @@ import logoWurth from "@/assets/LOGOWURTH.png";
 export default function Partners() {
   const partners = [
     {
-      category: "Academic Partners",
       items: [
         { name: "Universitat Politècnica de València", image: logoUPV },
         { name: "Generación Espontánea", image: logoGE },
@@ -41,7 +40,6 @@ export default function Partners() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: sectionIndex * 0.2 }}
             >
-              <h3 className="text-2xl font-bold mb-6">{section.category}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {section.items.map((partner, index) => (
                   <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
