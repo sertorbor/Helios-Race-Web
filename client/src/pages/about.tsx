@@ -7,7 +7,7 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="py-16 md:py-24 bg-white">
       <div className="container">
         <SectionHeader
           title={t('about.title')}
@@ -22,13 +22,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-4">{t('about.mission.title')}</h3>
-            <p className="text-muted-foreground mb-6">
-              {t('about.mission.text1')}
-            </p>
-            <p className="text-muted-foreground">
-              {t('about.mission.text2')}
-            </p>
+            <h3 className="text-3xl font-extrabold text-gray-900 mb-6">{t("about.mission.title")}</h3>
+            <p className="text-gray-700 mb-6 leading-relaxed">{t("about.mission.text1")}</p>
+            <p className="text-gray-700 leading-relaxed">{t("about.mission.text2")}</p>
           </motion.div>
 
           <motion.div
@@ -36,28 +32,29 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[400px] rounded-lg overflow-hidden"
+            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
           >
             <img
               src={mision}
               alt="Solar Racing Car"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </motion.div>
         </div>
 
+        {/* Segunda Sección: Innovación & Sostenibilidad */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[400px] rounded-lg overflow-hidden md:order-1 order-2"
+            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl md:order-1 order-2"
           >
             <img
               src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
               alt="Team Working"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </motion.div>
 
