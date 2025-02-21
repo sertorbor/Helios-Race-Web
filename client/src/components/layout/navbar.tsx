@@ -25,7 +25,7 @@ export default function Navbar() {
   const FlagIcon = language === 'en' ? GB : ES;
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#2a2f3d] to-[#121620] backdrop-blur-md shadow-md transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#2a2f3d] to-[#121620]/50 backdrop-blur-md shadow-md transition-all duration-300">
       <div className="container flex h-[74px] items-center justify-between">
         
         {/* Logo */}
