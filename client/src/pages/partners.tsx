@@ -5,86 +5,83 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logoUPV from "@/assets/LOGOUPV.png";
 import logoGE from "@/assets/LOGOGE.png";
-import logo from "@/assets/logo_blue.png";
+import logo from "@/assets/logo.png";
 import logoFord from "@/assets/LOGOFORD.png";
 import logoWurth from "@/assets/LOGOWURTH.png";
 
 export default function Partners() {
   const partners = [
-    {
-      items: [
-        { name: "Universitat Politècnica de València", image: logoUPV, link: "https://www.upv.es" },
-        { name: "Generación Espontánea", image: logoGE, link: "https://generacionespontanea.upv.es" },
-        { name: "Autoprieto", image: logo, link: "https://www.autoprieto.com" },
-        { name: "Ford", image: logoFord, link: "https://www.ford.com" },
-        { name: "Würth EleKtronik", image: logoWurth, link: "https://www.we-online.com" }
-      ]
-    }
+    { name: "Universitat Politècnica de València", image: logoUPV, url: "https://www.upv.es" },
+    { name: "Generación Espontánea", image: logoGE, url: "https://generacionespontanea.upv.es" },
+    { name: "Autoprieto", image: logo, url: "https://www.autoprieto.com" },
+    { name: "Ford", image: logoFord, url: "https://www.ford.com" },
+    { name: "Würth Elektronik", image: logoWurth, url: "https://www.we-online.com" },
   ];
 
   return (
-    <div className="flex justify-center py-16 md:py-24 ">
+    <div className="flex justify-center py-20 md:py-24 bg-white text-gray-900">
       <div className="container">
-        <SectionHeader
-          title="Nuestros Partners"
-          subtitle="La colaboración es la clave del éxito. Conoce a nuestros partners, quienes hacen realidad este proyecto."
-          centered
+        
+        {/* 🏁 Sección de Encabezado */}
+        <SectionHeader 
+          title="Nuestros Partners" 
+          subtitle="Colaboramos con instituciones y empresas que impulsan la innovación en movilidad sostenible y competición solar." 
+          centered 
         />
 
-        <div className="grid gap-12">
-          {partners.map((section, sectionIndex) => (
+        {/* 🔹 Grid de Partners */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          {partners.map((partner, index) => (
             <motion.div
-              key={sectionIndex}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: sectionIndex * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {section.items.map((partner, index) => (
-                  <a 
-                    key={index} 
-                    href={partner.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
-                      <CardContent className="pt-6">
-                        <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
-                        {partner.image && (
-                          <div className="mb-4 flex justify-center my-6">
-                            <img 
-                              src={partner.image} 
-                              alt={partner.name} 
-                              className="h-24 w-auto object-contain"
-                            />
-                          </div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </a>
-                ))}
-              </div>
+              {/* Link envuelve el Card completo */}
+              <a 
+                href={partner.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="border border-gray-300 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-400 hover:scale-105">
+                  <CardContent className="flex flex-col items-center p-6">
+                    <div className="mb-4 flex justify-center p-4 bg-transparent rounded-lg w-full">
+                      <img 
+                        src={partner.image} 
+                        alt={partner.name} 
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>
 
+        {/* 🎯 Sección de Call to Action (Únete a nuestros Partners) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-24 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">Únete a nuestros Partners</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            ¿Quieres colaborar con HeliosRaceUPV? Sé nuestro partner y forma parte del futuro de las competiciones solares.
+          <h3 className="text-3xl font-extrabold text-gray-900 mb-4">
+            Sé parte de nuestra red de innovación
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+            Únete a <span className="font-semibold text-yellow-500">Helios Race UPV</span> y forma parte del cambio hacia un futuro de movilidad sostenible. 
+            Colabora con nosotros y ayúdanos a desarrollar las tecnologías del mañana.
           </p>
-          <Button asChild size="lg">
-            <Link href="/contact">Contáctanos</Link>
+          <Button asChild size="lg" className="bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400">
+            <Link href="/contact">Conviértete en Partner</Link>
           </Button>
         </motion.div>
+
       </div>
     </div>
   );
