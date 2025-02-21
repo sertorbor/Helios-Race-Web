@@ -5,97 +5,80 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logoUPV from "@/assets/LOGOUPV.png";
 import logoGE from "@/assets/LOGOGE.png";
-import logo from "@/assets/logo_blue.png";
+import logo from "@/assets/logo.png";
 import logoFord from "@/assets/LOGOFORD.png";
 import logoWurth from "@/assets/LOGOWURTH.png";
 
 export default function Partners() {
   const partners = [
-    {
-      category: "Academic Partners",
-      items: [
-        { name: "Universitat Politècnica de València", image: logoUPV },
-        { name: "Generación Espontánea", image: logoGE },
-      ]
-    },
-    {
-      category: "Industry Partners",
-      items: [
-        { name: "Autoprieto", image: logo },
-        { name: "Ford", image: logoFord },
-        { name: "Würth Elektronik", image: logoWurth }
-      ]
-    }
+    { name: "Universitat Politècnica de València", image: logoUPV, url: "https://www.upv.es" },
+    { name: "Generación Espontánea", image: logoGE, url: "https://generacionespontanea.upv.es" },
+    { name: "Autoprieto", image: logo, url: "https://www.autoprieto.com" },
+    { name: "Ford", image: logoFord, url: "https://www.ford.com" },
+    { name: "Würth Elektronik", image: logoWurth, url: "https://www.we-online.com" },
   ];
 
   return (
-    <div className="flex justify-center py-16 md:py-16 bg-white">
+    <div className="flex justify-center py-20 md:py-24 bg-white text-gray-900">
       <div className="container">
-
-        {/* Sección de Encabezado */}
-        <SectionHeader
-          title="Nuestros Partners"
-          subtitle="La colaboración es la clave del éxito. Conoce a nuestros partners, quienes hacen realidad este proyecto."
-          centered
+        
+        {/* 🏁 Sección de Encabezado */}
+        <SectionHeader 
+          title="Nuestros Partners" 
+          subtitle="Colaboramos con instituciones y empresas que impulsan la innovación en movilidad sostenible y competición solar." 
+          centered 
         />
 
-        {/* Grid de Partners */}
-        <div className="grid gap-16">
-          {partners.map((section, sectionIndex) => (
+        {/* 🔹 Grid de Partners */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          {partners.map((partner, index) => (
             <motion.div
-              key={sectionIndex}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: sectionIndex * 0.2 }}
-              className="bg-[#222532] p-8 rounded-2xl shadow-lg"
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <h3 className="text-2xl font-extrabold text-yellow-400 mb-8 text-center uppercase">
-                {section.category}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {section.items.map((partner, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.15 }}
-                  >
-                    {/* Se aplica la interactividad en el cuadro blanco */}
-                    <Card className="border border-gray-300 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                      <CardContent className="pt-6 flex flex-col items-center">
-                        <div className="mb-4 flex justify-center my-4 p-4">
-                          <img 
-                            src={partner.image} 
-                            alt={partner.name} 
-                            className="h-20 w-auto object-contain"
-                          />
-                        </div>
-                        <h4 className="text-lg font-semibold text-gray-800">{partner.name}</h4>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
+              {/* Link envuelve el Card completo */}
+              <a 
+                href={partner.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="border border-gray-300 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-400 hover:scale-105">
+                  <CardContent className="flex flex-col items-center p-6">
+                    <div className="mb-4 flex justify-center p-4 bg-transparent rounded-lg w-full">
+                      <img 
+                        src={partner.image} 
+                        alt={partner.name} 
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>
 
-        {/* Sección de Call to Action (Únete a nuestros Partners) */}
+        {/* 🎯 Sección de Call to Action (Únete a nuestros Partners) */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mt-24 text-center"
         >
-          <h3 className="text-3xl font-extrabold text-gray-900 mb-4">Únete a nuestros Partners</h3>
+          <h3 className="text-3xl font-extrabold text-gray-900 mb-4">
+            Sé parte de nuestra red de innovación
+          </h3>
           <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-            ¿Quieres colaborar con <span className="text-yellow-400 font-semibold">HeliosRaceUPV</span>? Sé nuestro partner y forma parte del futuro de las competiciones solares.
+            Únete a <span className="font-semibold text-yellow-500">Helios Race UPV</span> y forma parte del cambio hacia un futuro de movilidad sostenible. 
+            Colabora con nosotros y ayúdanos a desarrollar las tecnologías del mañana.
           </p>
-          <Button asChild size="lg" className="bg-yellow-500 text-black hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            <Link href="/contact">Contáctanos</Link>
+          <Button asChild size="lg" className="bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400">
+            <Link href="/contact">Conviértete en Partner</Link>
           </Button>
         </motion.div>
 
