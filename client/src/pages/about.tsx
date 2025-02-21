@@ -32,12 +32,12 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
+            className="relative h-[400px] rounded-3xl overflow-hidden shadow-xl"
           >
             <img
               src={mision}
               alt="Solar Racing Car"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
             />
           </motion.div>
         </div>
@@ -49,12 +49,12 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl md:order-1 order-2"
+            className="relative h-[400px] rounded-3xl overflow-hidden shadow-xl md:order-1 order-2 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
           >
             <img
               src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
               alt="Team Working"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
             />
           </motion.div>
 
@@ -67,10 +67,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">Visión</h3>
             <p className="text-muted-foreground mb-6">
-              Our team constantly pushes technological boundaries, developing cutting-edge solutions in solar power, aerodynamics, and lightweight materials.
-            </p>
-            <p className="text-muted-foreground">
-              Every project we undertake is guided by our commitment to environmental sustainability and the advancement of clean energy technologies.
+              Diseñar, fabricar y mejorar tecnología eficiente y escalable para contribuir al desarrollo del transporte sostenible, con el uso de energías verdes como la energía solar..
             </p>
           </motion.div>
         </div>
@@ -97,15 +94,71 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="relative h-[400px] rounded-lg overflow-hidden md:order-2 order-1"
+            className="relative h-[400px] rounded-3xl overflow-hidden md:order-2 order-1 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
           >
             <img
               src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
               alt="Team Working"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
             />
           </motion.div>
         </div>
+        
+
+        {/* Nuevo Subapartado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 text-right"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Competición</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="text-center">
+              <img
+                src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                alt="Imagen Competicion"
+                className="w-full h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+              />
+            </div>
+            <div>
+              <p className="text-muted-foreground mb-6 my-10">
+                Aquí puedes agregar el contenido de tu nuevo subapartado.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Nuevo Subapartado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 text-left my-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Conoce nuestros vehículos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="text-center my-10">
+              <img
+                src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                alt="Imagen 1"
+                className="w-2/3 h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+              />
+              <p className="text-muted-foreground">Descripción de la imagen 1.</p>
+            </div>
+            <div className="text-center my-10">
+              <img
+                src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                alt="Imagen 2"
+                className="w-2/3 h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+              />
+              <p className="text-muted-foreground">Descripción de la imagen 2.</p>
+            </div>
+          </div>
+        </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
