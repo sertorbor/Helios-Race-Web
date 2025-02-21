@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <div className="py-16 md:py-24 relative overflow-hidden">
       {/* Imagen izquierda */}
-      <div className="absolute -left-48 -top-48 w-96 h-96 transform -rotate-45 opacity-100">
+      <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
           alt="Decorative left"
@@ -60,7 +60,7 @@ export default function Contact() {
         />
       </div>
       {/* Imagen derecha */}
-      <div className="absolute -right-48 -bottom-48 w-96 h-96 transform rotate-45 opacity-100">
+      <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
           alt="Decorative right"
@@ -141,7 +141,7 @@ export default function Contact() {
                 className="w-full"
                 disabled={mutation.isPending}
               >
-                {mutation.isPending ? "Enviando..." : "Mensaje enviado"}
+                {mutation.isPending ? "Enviando..." : "Enviar mensaje"}
               </Button>
             </form>
           </Form>
