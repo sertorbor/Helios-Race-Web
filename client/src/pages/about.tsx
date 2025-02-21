@@ -111,7 +111,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-right"
+          className="mt-16 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Competición</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -119,7 +119,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
                 alt="Imagen Competicion"
-                className="w-full h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+                className="w-4/5 h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
             </div>
             <div>
@@ -136,7 +136,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-left my-20"
+          className="mt-16 text-center my-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Conoce nuestros vehículos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

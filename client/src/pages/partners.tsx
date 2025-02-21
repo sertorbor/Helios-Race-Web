@@ -13,11 +13,11 @@ export default function Partners() {
   const partners = [
     {
       items: [
-        { name: "Universitat Politècnica de València", image: logoUPV },
-        { name: "Generación Espontánea", image: logoGE },
-        { name: "Autoprieto", image: logo },
-        { name: "Ford", image: logoFord },
-        { name: "Würth EleKtronik", image: logoWurth }
+        { name: "Universitat Politècnica de València", image: logoUPV, link: "https://www.upv.es" },
+        { name: "Generación Espontánea", image: logoGE, link: "https://generacionespontanea.upv.es" },
+        { name: "Autoprieto", image: logo, link: "https://www.autoprieto.com" },
+        { name: "Ford", image: logoFord, link: "https://www.ford.com" },
+        { name: "Würth EleKtronik", image: logoWurth, link: "https://www.we-online.com" }
       ]
     }
   ];
@@ -42,20 +42,28 @@ export default function Partners() {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {section.items.map((partner, index) => (
-                  <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
-                    <CardContent className="pt-6">
-                    <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
-                    {partner.image && (
-                        <div className="mb-4 flex justify-center my-6">
-                          <img 
-                            src={partner.image} 
-                            alt={partner.name} 
-                            className="h-24 w-auto object-contain"
-                          />
-                        </div>
-                      )}                      
-                    </CardContent>
-                  </Card>
+                  <a 
+                    key={index} 
+                    href={partner.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
+                      <CardContent className="pt-6">
+                        <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
+                        {partner.image && (
+                          <div className="mb-4 flex justify-center my-6">
+                            <img 
+                              src={partner.image} 
+                              alt={partner.name} 
+                              className="h-24 w-auto object-contain"
+                            />
+                          </div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </a>
                 ))}
               </div>
             </motion.div>
