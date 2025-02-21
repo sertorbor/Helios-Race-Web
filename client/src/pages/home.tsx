@@ -1,7 +1,11 @@
-import Hero from "@/components/home/hero";
+import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import Hero from "@/components/home/hero";
+import foto1 from "@/assets/foto1.jpg";
+import foto2 from "@/assets/foto2.jpg";
+import foto3 from "@/assets/foto3.jpg";
+import foto4 from "@/assets/foto4.png";
 
 export default function Home() {
   return (
@@ -52,17 +56,17 @@ export default function Home() {
             {
               title: "Innovation",
               description: "Pioneering breakthroughs in aerodynamics, energy efficiency, and solar mobility.",
-              image: "https://images.unsplash.com/photo-1726795867795-32bc9872a44a"
+              image: foto2
             },
             {
               title: "Sustainability",
               description: "Committed to an eco-friendly future, reducing carbon footprints with solar technology.",
-              image: "https://images.unsplash.com/photo-1726795867801-63c0a37b80c6"
+              image: foto4
             },
             {
               title: "Education",
               description: "Empowering the next generation of engineers through hands-on experience in cutting-edge projects.",
-              image: "https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+              image: foto3
             }
           ].map((feature, index) => (
             <motion.div

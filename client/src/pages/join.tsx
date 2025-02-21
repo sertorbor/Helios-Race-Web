@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/enseñarniño.jpg";
 import logo2 from "@/assets/trespose.jpg";
 import logo3 from "@/assets/logo_blue.png"; // Añade más imágenes según sea necesario
-import backgroundImage from "@/assets/logo.png"; // Añade la imagen de fondo
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -60,7 +59,7 @@ export default function Join() {
             transition={{ duration: 0.6 }}
             className="relative flex justify-center"
           >
-            <div className="mt-4 md:mt-8 py-10 my-12 flex items-center justify-center">
+            <div className="mt-4 md:mt-8 py-10 flex items-center justify-center">
               <Slider {...settings} className="w-full">
                 <div>
                   <img
@@ -93,31 +92,20 @@ export default function Join() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="relative flex justify-center"
-=======
-            className="relative flex flex-col items-center justify-center"
->>>>>>> main
           >
-            <div className="relative w-[900px] h-[400px]">
-              <img
-                src={backgroundImage}
-                alt="Background"
-                className="absolute inset-0 w-[900px] h-[100px] object-cover rounded-lg my-6"
-              />
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-white my-16">¿Quieres unirte?</h3>
-                <p className="text-white mb-8 text-center max-w-md">
-                  Si te apasiona la tecnología, la innovación y el automovilismo, ¡únete! Trabaja con nosotros de cerca para desarrollar un sistema de propulsión sostenible y eficiente. ¡Te esperamos!
-                </p>
-                <Button 
-                  size="lg"
-                  className="button-primary w-[450px] bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
-                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSedJuHKW4hCQqV1TB4QSJQvr5TFFCX7OlC7L_D-3MxDpIyKuw/alreadyresponded', '_blank')}
-                >
-                  Apúntate
-                </Button>
-              </div>
+            <div className="text-center max-w-md">
+              <h3 className="text-2xl font-bold mb-4">¿Quieres unirte?</h3>
+              <p className="text-muted-foreground mb-8">
+                Si te apasiona la tecnología, la innovación y el automovilismo, ¡únete! Trabaja con nosotros de cerca para desarrollar un sistema de propulsión sostenible y eficiente. ¡Te esperamos!
+              </p>
+              <Button 
+                size="lg"
+                className="button-primary w-full"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSedJuHKW4hCQqV1TB4QSJQvr5TFFCX7OlC7L_D-3MxDpIyKuw/alreadyresponded', '_blank')}
+              >
+                Apúntate
+              </Button>
             </div>
           </motion.div>
         </div>
