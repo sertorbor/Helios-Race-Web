@@ -68,7 +68,7 @@ export default function Contact() {
         />
       </div>
       {/* Contenido central */}
-      <div className="container max-w-4xl relative z-10">
+      <div className="container max-w-4xl relative z-10 md:py-0">
         <SectionHeader
           title="Contáctanos"
           subtitle="¿Tienes preguntas o quieres aprender más sobre HeliosRace UPV? ¡Ponte en contacto con nosotros!"
@@ -138,7 +138,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+                className="w-full bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
                 disabled={mutation.isPending}
               >
                 {mutation.isPending ? "Enviando..." : "Enviar mensaje"}

@@ -8,7 +8,7 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <div className="py-16 md:py-24 bg-white">
+    <div className="py-16 md:py-15 bg-white">
       <div className="container">
         <SectionHeader title={t('about.title')} />
         <p className="text-muted-foreground">

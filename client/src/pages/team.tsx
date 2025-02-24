@@ -42,7 +42,7 @@ export default function Team() {
   const { t } = useLanguage();
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="py-16 md:py-15">
       <div className="container">
         <SectionHeader
           title={t('team.title')}
