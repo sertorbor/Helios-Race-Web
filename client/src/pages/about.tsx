@@ -66,7 +66,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">Visión</h3>
             <p className="text-muted-foreground mb-6">
-              Diseñar, fabricar y mejorar tecnología eficiente y escalable para contribuir al desarrollo del transporte sostenible, con el uso de energías verdes como la energía solar.
+            Ser un referente internacional en el desarrollo de vehículos eléctricos solares, liderando la investigación y la aplicación de soluciones innovadoras que contribuyan a la creación de un sistema de transporte sostenible, eficiente y accesible. Aspiramos a inspirar a la sociedad a adoptar un estilo de vida más respetuoso con el medio ambiente, demostrando el potencial de la energía solar como fuente de energía limpia y renovable para la movilidad.
             </p>
           </motion.div>
         </div>
@@ -81,10 +81,25 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">Valores</h3>
             <p className="text-muted-foreground mb-6">
-              Our team constantly pushes technological boundaries, developing cutting-edge solutions in solar power, aerodynamics, and lightweight materials.
+            </p>
+            Innovación: Fomentamos la creatividad, la experimentación y la búsqueda constante de nuevas soluciones para mejorar el rendimiento, la eficiencia y la sostenibilidad de nuestros vehículos.
+            <p className="text-muted-foreground">
+            Sostenibilidad: Priorizamos el uso de materiales y tecnologías respetuosas con el medio ambiente, minimizando el impacto ambiental de nuestros procesos y productos.
             </p>
             <p className="text-muted-foreground">
-              Every project we undertake is guided by our commitment to environmental sustainability and the advancement of clean energy technologies.
+            Excelencia: Nos esforzamos por alcanzar los más altos estándares de calidad en el diseño, la construcción y el rendimiento de nuestros vehículos, buscando la mejora continua en todos los aspectos de nuestro trabajo.
+            </p>
+            <p className="text-muted-foreground">
+            Trabajo en equipo: Creemos en la colaboración, el respeto mutuo y la comunicación abierta como pilares fundamentales para alcanzar nuestros objetivos.
+            </p>
+            <p className="text-muted-foreground">
+            Aprendizaje continuo: Promovemos el desarrollo personal y profesional de nuestros miembros, fomentando la adquisición de conocimientos y habilidades en un entorno de aprendizaje dinámico y colaborativo.
+            </p>
+            <p className="text-muted-foreground">
+            Compromiso: Estamos dedicados a la misión de HeliosRace UPV, asumiendo la responsabilidad de nuestros actos y trabajando con pasión y determinación para lograr nuestros objetivos.
+            </p>
+            <p className="text-muted-foreground">
+            Impacto social: Buscamos generar un impacto positivo en la sociedad, promoviendo la conciencia ambiental y demostrando el potencial de la energía solar para transformar el futuro de la movilidad.
             </p>
           </motion.div>
           
