@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
-import mision from "@/assets/trespose.jpg"
+import mision from "@/assets/trespose.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -9,11 +9,10 @@ export default function About() {
   return (
     <div className="py-16 md:py-15 bg-white">
       <div className="container">
-        <SectionHeader
-          title={t('about.title')}
-        />
-        <p className= "text-muted-foreground">
-          Pioneros en movilidad sostenible a través de la innovación en carreras solares </p>
+        <SectionHeader title={t('about.title')} />
+        <p className="text-muted-foreground">
+          Pioneros en movilidad sostenible a través de la innovación en carreras solares
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
@@ -67,13 +66,13 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">Visión</h3>
             <p className="text-muted-foreground mb-6">
-              Diseñar, fabricar y mejorar tecnología eficiente y escalable para contribuir al desarrollo del transporte sostenible, con el uso de energías verdes como la energía solar..
+            Ser un referente internacional en el desarrollo de vehículos eléctricos solares, liderando la investigación y la aplicación de soluciones innovadoras que contribuyan a la creación de un sistema de transporte sostenible, eficiente y accesible. Aspiramos a inspirar a la sociedad a adoptar un estilo de vida más respetuoso con el medio ambiente, demostrando el potencial de la energía solar como fuente de energía limpia y renovable para la movilidad.
             </p>
           </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-        <motion.div
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -82,10 +81,25 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">Valores</h3>
             <p className="text-muted-foreground mb-6">
-              Our team constantly pushes technological boundaries, developing cutting-edge solutions in solar power, aerodynamics, and lightweight materials.
+            </p>
+            Innovación: Fomentamos la creatividad, la experimentación y la búsqueda constante de nuevas soluciones para mejorar el rendimiento, la eficiencia y la sostenibilidad de nuestros vehículos.
+            <p className="text-muted-foreground">
+            Sostenibilidad: Priorizamos el uso de materiales y tecnologías respetuosas con el medio ambiente, minimizando el impacto ambiental de nuestros procesos y productos.
             </p>
             <p className="text-muted-foreground">
-              Every project we undertake is guided by our commitment to environmental sustainability and the advancement of clean energy technologies.
+            Excelencia: Nos esforzamos por alcanzar los más altos estándares de calidad en el diseño, la construcción y el rendimiento de nuestros vehículos, buscando la mejora continua en todos los aspectos de nuestro trabajo.
+            </p>
+            <p className="text-muted-foreground">
+            Trabajo en equipo: Creemos en la colaboración, el respeto mutuo y la comunicación abierta como pilares fundamentales para alcanzar nuestros objetivos.
+            </p>
+            <p className="text-muted-foreground">
+            Aprendizaje continuo: Promovemos el desarrollo personal y profesional de nuestros miembros, fomentando la adquisición de conocimientos y habilidades en un entorno de aprendizaje dinámico y colaborativo.
+            </p>
+            <p className="text-muted-foreground">
+            Compromiso: Estamos dedicados a la misión de HeliosRace UPV, asumiendo la responsabilidad de nuestros actos y trabajando con pasión y determinación para lograr nuestros objetivos.
+            </p>
+            <p className="text-muted-foreground">
+            Impacto social: Buscamos generar un impacto positivo en la sociedad, promoviendo la conciencia ambiental y demostrando el potencial de la energía solar para transformar el futuro de la movilidad.
             </p>
           </motion.div>
           
@@ -104,7 +118,6 @@ export default function About() {
           </motion.div>
         </div>
         
-
         {/* Nuevo Subapartado */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,18 +126,18 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mt-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Competición</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-12">Competición</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
             <div className="text-center">
               <img
                 src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
                 alt="Imagen Competicion"
-                className="w-4/5 h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+                className="w-4/5 h-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
             </div>
             <div>
-              <p className="text-muted-foreground mb-6 my-10">
-                Aquí puedes agregar el contenido de tu nuevo subapartado.
+              <p className="text-muted-foreground mb-6 my-2 text-left">
+                La (nombre de la competición) competition busca el desarrollo de la tecnología de propulsión de vehículos por medio de energía de procedencia solar, mediante la competitividad amistosa entre los equipos participantes. Durante los días 22 y 23 de agosto de 2024, el equipo de HeliosRaceUPV tuvo el placer y oportunidad de participar junto a su prototipo en el circuito (insertar nombre de circuito) en (nom.ciudad), Bélgica.
               </p>
             </div>
           </div>
@@ -144,7 +157,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
                 alt="Imagen 1"
-                className="w-2/3 h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+                className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
               <p className="text-muted-foreground">Descripción de la imagen 1.</p>
             </div>
@@ -152,13 +165,12 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
                 alt="Imagen 2"
-                className="w-2/3 h-auto rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+                className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
               <p className="text-muted-foreground">Descripción de la imagen 2.</p>
             </div>
           </div>
         </motion.div>
-
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
