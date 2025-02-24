@@ -64,12 +64,10 @@ export default function Partners() {
                     <div className="mb-4 flex justify-center p-4 bg-transparent rounded-lg w-full">
                       <img 
                         src={partner.image} 
-                        alt={partner.name} 
                         className="h-24 w-auto object-contain"
                       />
                     </div>
                     <p className="text-gray-900 font-semibold text-center">
-                      {partner.name}
                     </p>
                   </CardContent>
                 </Card>
