@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
 import mision from "@/assets/trespose.jpg";
+import CocheUno from "@/assets/Prototipo1.jpeg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -155,11 +156,11 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-center my-10">
               <img
-                src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                src={CocheUno}
                 alt="Imagen 1"
                 className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
-              <p className="text-muted-foreground">Descripción de la imagen 1.</p>
+              <p className="text-muted-foreground">Nuestro primer prototipo. El comienzo de un legado.</p>
             </div>
             <div className="text-center my-10">
               <img
