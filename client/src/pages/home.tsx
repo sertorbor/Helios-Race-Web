@@ -1,7 +1,11 @@
-import Hero from "@/components/home/hero";
+import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import Hero from "@/components/home/hero";
+import foto1 from "@/assets/foto1.jpg";
+import foto2 from "@/assets/foto2.jpg";
+import foto3 from "@/assets/foto3.jpg";
+import foto4 from "@/assets/foto4.png";
 
 export default function Home() {
   return (
@@ -43,7 +47,6 @@ export default function Home() {
           </motion.p>
 
           {/* Separador decorativo mejorado */}
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6 rounded-full shadow-md"></div>
         </div>
 
         {/* Sección de Tarjetas con diseño más profesional */}
@@ -51,18 +54,18 @@ export default function Home() {
           {[
             {
               title: "Innovation",
-              description: "Pioneering breakthroughs in aerodynamics, energy efficiency, and solar mobility.",
-              image: "https://images.unsplash.com/photo-1726795867795-32bc9872a44a"
+              description: "We continuously explore new frontiers in aerodynamics, energy efficiency, and solar mobility. By integrating state-of-the-art technologies, we optimize performance and push the limits of sustainable engineering.",
+              image: foto2
             },
-            {
+            { 
               title: "Sustainability",
-              description: "Committed to an eco-friendly future, reducing carbon footprints with solar technology.",
-              image: "https://images.unsplash.com/photo-1726795867801-63c0a37b80c6"
+              description: "Sustainability is at the heart of our mission. Through cutting-edge research in renewable energy, we aim to create eco-friendly transport solutions that contribute to a cleaner, more efficient future.",
+              image: foto4
             },
             {
               title: "Education",
-              description: "Empowering the next generation of engineers through hands-on experience in cutting-edge projects.",
-              image: "https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+              description: "Our team fosters knowledge-sharing and hands-on experience, empowering the next generation of engineers. We provide real-world challenges that enhance technical skills and drive future innovation.",
+              image: foto3
             }
           ].map((feature, index) => (
             <motion.div
@@ -73,15 +76,15 @@ export default function Home() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative group"
             >
-              <Card className="bg-gray-700 border border-gray-600 shadow-lg hover:shadow-yellow-400 transition-shadow duration-500 rounded-xl overflow-hidden transform group-hover:scale-105">
+              <Card className="bg-gray-700 border border-gray-600 shadow-lg hover:shadow-xl transition-shadow duration-500 rounded-xl overflow-hidden transform group-hover:scale-105">
                 <img 
                   src={feature.image}
                   alt={feature.title}
                   className="w-full h-60 object-cover brightness-90 group-hover:brightness-110 transition-all duration-300"
                 />
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-yellow-300">{feature.title}</h3>
-                  <p className="text-gray-300 mt-2">{feature.description}</p>
+                <CardContent className="p-6 text-center group-hover:scale-105 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold text-yellow-300 group-hover:text-yellow-400 transition-colors duration-300">{feature.title}</h3>
+                  <p className="text-gray-300 mt-3 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
