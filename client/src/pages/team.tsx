@@ -4,57 +4,59 @@ import { useLanguage } from "@/lib/use-language";
 
 const teamMembers = [
   {
-    name: "Team Lead",
-    role: "Project Director",
+    name: "Francisco Javier Fernandez Sanmartín",
+    role: "Team Leader",
+    linkedin: "https://www.linkedin.com/in/francisco-javier-fernandez-sanmart%C3%ADn-273a5724b/"
   },
   {
     name: "David Grueso Conejero",
     role: "Telemetry Engineer",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/david-grueso-conejero-833755235/"
   },
   {
     name: "Sergio Tortosa Borrell",
     role: "Telemetry Engineer",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/sergio-tortosa-borrell-8252052a0/"
   },
   {
-    name: "Power Systems",
-    role: "Solar Technology Expert",
-    linkedin: "#"
-  },
-  {
-    name: "Mechanical Lead",
-    role: "Structural Engineer",
-    linkedin: "#"
-  },
-  {
-    name: "Operations Lead",
-    role: "Project Manager",
-    linkedin: "#"
-  },
-  {
-    name: "Team Lead",
-    role: "Project Director",
-  },
-  {
-    name: "David Grueso Conejero",
+    name: "Alejandro Espí Cambra",
     role: "Telemetry Engineer",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/alejandro-espi-cambra/"
   },
   {
-    name: "Sergio Tortosa Borrell",
-    role: "Telemetry Engineer",
-    linkedin: "#"
-  },
-  {
-    name: "Power Systems",
+    name: "Antonio Melero Calvete",
     role: "Solar Technology Expert",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/antonio-melero-calvete-b91ab6252/"
   },
   {
-    name: "Mechanical Lead",
-    role: "Structural Engineer",
-    linkedin: "#"
+    name: "Ruben Verdeguer Asensio",
+    role: "Telemetry Engineer",
+    linkedin: "https://www.linkedin.com/in/ruben-verdeguer-asensio/"
+  },
+  {
+    name: "Raül Ferrando Navarro",
+    role: "Mechanical Engineer",
+    linkedin: "https://www.linkedin.com/in/ra%C3%BCl-ferrando-navarro-6ba257332/"
+  },
+  {
+    name: "Jorge Rubio Valdés",
+    role: "Steering and Suspension Engineer",
+    linkedin: "https://www.linkedin.com/in/jorge-rubio-vald%C3%A9s/"
+  },
+  {
+    name: "Lorena Lacasa López",
+    role: "Battery Engineer",
+    linkedin: "https://www.linkedin.com/in/lorena-lacasa-l%C3%B3pez-a4879033b/"
+  },
+  {
+    name: "Paloma Arnal Estellés",
+    role: "Communications Engineer",
+    linkedin: "https://www.linkedin.com/in/paloma-arnal-estell%C3%A9s-332a16263/"
+  },
+  {
+    name: "Saul Ferrer Zaragoza",
+    role: "Fotovoltaical Engineer",
+    linkedin: "https://www.linkedin.com/in/saul-ferrer-zaragoza-602b96230/"
   },
   {
     name: "Operations Lead",
