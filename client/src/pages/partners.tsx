@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logoUPV from "@/assets/LOGOUPV.png";
 import logoGE from "@/assets/LOGOGE.png";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/LOGOAUTOPRIETO.jpeg";
 import logoFord from "@/assets/LOGOFORD.png";
 import logoWurth from "@/assets/LOGOWURTH.png";
 
