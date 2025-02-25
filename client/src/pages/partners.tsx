@@ -59,7 +59,7 @@ export default function Partners() {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <Card className="border border-gray-300 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-400 hover:scale-105">
+                <Card className="border border-gray-300 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-600 hover:scale-105">
                   <CardContent className="flex flex-col items-center p-6">
                     <div className="mb-4 flex justify-center p-4 bg-transparent rounded-lg w-full">
                       <img 

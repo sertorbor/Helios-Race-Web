@@ -3,8 +3,13 @@ import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
 import mision from "@/assets/trespose.jpg";
 import CocheUno from "@/assets/Prototipo1.jpeg";
-import CocheDos from "@/assets/trespose.jpg"; // Añade la ruta correcta de la imagen
-import CocheTres from "@/assets/trespose.jpg"; // Añade la ruta correcta de la imagen
+import CocheDos from "@/assets/Prototipo1.jpeg";
+import CompetiPeq1 from "@/assets/trespose.jpg";
+import CompetiPeq2 from "@/assets/trespose.jpg";
+import Innovacion from "@/assets/engranaje.png";
+import Teamwork from "@/assets/Teamwork.png";
+import Sostenibilidad from "@/assets/leave.png";
+import Compromiso from "@/assets/engranaje.png";
 
 export default function About() {
   const { t } = useLanguage();
@@ -14,7 +19,7 @@ export default function About() {
       <div className="container">
         <SectionHeader title={t('about.title')} />
         <p className="text-muted-foreground">
-          Pioneros en movilidad sostenible a través de la innovación en carreras solares
+          Desde la tierra del sol, para el resto del mundo. Conoce nuestra historia, nuestra misión y nuestros valores.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
@@ -82,19 +87,25 @@ export default function About() {
             transition={{ duration: 1.5 }}
             className="md:order-1 order-2"
           >
-            <h3 className="text-2xl font-bold mb-4">Valores</h3>
-            <p className="text-muted-foreground mb-6">
-            </p>
-            Innovación: Fomentamos la creatividad, la experimentación y la búsqueda constante de nuevas soluciones para mejorar el rendimiento, la eficiencia y la sostenibilidad de nuestros vehículos.
-            <p className="text-muted-foreground">
-            Sostenibilidad: Priorizamos el uso de materiales y tecnologías respetuosas con el medio ambiente, minimizando el impacto ambiental de nuestros procesos y productos.
-            </p>
-            <p className="text-muted-foreground">
-            Trabajo en equipo: Creemos en la colaboración, el respeto mutuo y la comunicación abierta como pilares fundamentales para alcanzar nuestros objetivos.
-            </p>
-            <p className="text-muted-foreground">
-            Compromiso: Estamos dedicados a la misión de HeliosRace UPV, asumiendo la responsabilidad de nuestros actos y trabajando con pasión y determinación para lograr nuestros objetivos.
-            </p>
+            <h3 className="text-2xl font-bold mb-4 my-[30px]">Valores</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-6 my-[60px]">
+              <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
+                <img src={Innovacion} alt="Icono Innovación" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(25,190,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <span><strong style={{color : 'black'}}>Innovación:</strong> Fomentamos la creatividad, la experimentación y la búsqueda constante de nuevas soluciones para mejorar el rendimiento, la eficiencia y la sostenibilidad de nuestros vehículos.</span>
+              </p>
+              <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
+                <img src={Sostenibilidad} alt="Icono Sostenibilidad" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(25,190,0,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <span><strong style={{color : 'black'}}>Sostenibilidad:</strong> Priorizamos el uso de materiales y tecnologías respetuosas con el medio ambiente, minimizando el impacto ambiental de nuestros procesos y productos.</span>
+              </p>
+              <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
+                <img src={Teamwork} alt="Icono Trabajo en Equipo" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(250,14,18,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <span><strong style={{color : 'black'}}>Trabajo en Equipo:</strong> Creemos en la colaboración, el respeto mutuo y la comunicación abierta como pilares fundamentales para alcanzar nuestros objetivos.</span>
+              </p>
+              <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
+                <img src={Compromiso} alt="Icono Compromiso" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(250,190,19,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <span><strong style={{color : 'black'}}>Compromiso:</strong> Estamos dedicados a la misión de HeliosRace UPV, asumiendo la responsabilidad de nuestros actos y trabajando con pasión y determinación para lograr nuestros objetivos.</span>
+              </p>
+            </div>
           </motion.div>
           
           <motion.div
@@ -102,7 +113,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="relative h-[400px] rounded-3xl overflow-hidden md:order-2 order-1 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+            className="relative h-[400px] w-[600px] rounded-3xl overflow-hidden md:order-2 order-1 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl md:ml-auto"
           >
             <img
               src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
@@ -140,12 +151,12 @@ export default function About() {
               </p>
               <div className="grid grid-cols-2 gap-4 mt-4">
                 <img
-                  src={CocheDos}
+                  src={CompetiPeq1}
                   alt="Imagen 3"
                   className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                 />
                 <img
-                  src={CocheTres}
+                  src={CompetiPeq2}
                   alt="Imagen 4"
                   className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                 />
@@ -179,14 +190,19 @@ export default function About() {
             </div>
             <div className="text-center my-10">
               <img
-                src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                src={CocheDos}
                 alt="Imagen 2"
                 className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
-              <p className="text-muted-foreground">Descripción de la imagen 2.</p>
+              <p className="text-muted-foreground">Nuestra segunda apuesta. El futuro de Helios Race UPV.</p>
             </div>
           </div>
         </motion.div>
+
+        {/* 🔹 Línea Divisoria */}
+      <div className="w-full my-[110px]">
+        <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+      </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

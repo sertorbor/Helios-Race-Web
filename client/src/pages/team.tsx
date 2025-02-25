@@ -197,7 +197,7 @@ export default function Team() {
                 rel="noopener noreferrer"
                 className="block transition-transform hover:scale-105 text-center"
               >
-                <div className="relative w-60 h-60 rounded-full shadow-[0_0_10px_2px_rgba(255,215,0,2)] transition-all duration-500 group hover:shadow-[0_0_0_4px_rgba(255,215,0,0.7)]">
+                <div className="relative w-60 h-60 rounded-full shadow-[0_0_10px_4px_rgba(255,190,0,2)] transition-all duration-500 group hover:shadow-[0_0_0_4px_rgba(255,215,0,0.7)]">
                   <img
                     src={placeholderImage}
                     alt={member.name}
