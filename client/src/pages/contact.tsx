@@ -50,7 +50,7 @@ export default function Contact() {
   });
 
   return (
-    <div className="py-16 md:py-24 relative overflow-hidden">
+    <div className="py-16 md:py-16 relative overflow-hidden">
       {/* Imagen izquierda */}
       <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
         <img
@@ -68,12 +68,14 @@ export default function Contact() {
         />
       </div>
       {/* Contenido central */}
-      <div className="container max-w-4xl relative z-10 md:py-0">
-        <SectionHeader
+      <div className="container max-w-4xl relative z-10">
+      <SectionHeader
           title="Contáctanos"
-          subtitle="¿Tienes preguntas o quieres aprender más sobre HeliosRace UPV? ¡Ponte en contacto con nosotros!"
+          subtitle={`¿Tienes preguntas o quieres aprender más sobre HeliosRace UPV?\n¡Ponte en contacto con nosotros!`}
           centered
-        />
+          titleClassName="text-4xl font-extrabold text-gray-900 mb-4"
+          subtitleClassName="text-gray-600 mb-6 max-w-3xl mx-auto whitespace-pre-line"
+      />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
