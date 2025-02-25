@@ -79,16 +79,16 @@ export default function Join() {
                 className="absolute inset-0 object-cover rounded-lg my-[-150px]"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-black my-16">¿Quieres unirte?</h3>
+                <h3 className="text-2xl font-bold mb-4 text-black my-16">{t('join.titlend')}</h3>
                 <p className="text-gray mb-8 text-center max-w-md">
-                  Si te apasiona la tecnología, la innovación y el automovilismo, ¡únete! Trabaja con nosotros de cerca para desarrollar un sistema de propulsión sostenible y eficiente. ¡Te esperamos!
+                  {t('join.description')}
                 </p>
                 <Button 
                   size="lg"
                   className="button-primary w-[450px] bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
                   onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSedJuHKW4hCQqV1TB4QSJQvr5TFFCX7OlC7L_D-3MxDpIyKuw/alreadyresponded', '_blank')}
                 >
-                  Apúntate
+                  {t('join.button')}
                 </Button>
               </div>
             </div>

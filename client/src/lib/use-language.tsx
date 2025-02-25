@@ -48,6 +48,9 @@ const translations = {
     'join.readyTitle': 'Ready to Join?',
     'join.readyText': 'Apply now through our application form. We\'re looking forward to meeting you!',
     'join.apply': 'Apply Now',
+    'join.titlend': 'Do you want to join?',
+    'join.description': 'If you are passionate about technology, innovation and motorsports, join us! Work with us closely to develop a sustainable and efficient propulsion system. We are waiting for you!',
+    'join.button': 'Apply Now',
   },
   es: {
     'nav.about': 'Acerca',
@@ -88,6 +91,9 @@ const translations = {
     'join.readyTitle': '¿Listo para Unirte?',
     'join.readyText': 'Aplica ahora a través de nuestro formulario. ¡Esperamos conocerte!',
     'join.apply': 'Aplicar Ahora',
+    'join.titlend': '¿Quieres unirte?',
+    'join.description': 'Si te apasiona la tecnología, la innovación y el automovilismo, ¡únete! Trabaja con nosotros de cerca para desarrollar un sistema de propulsión sostenible y eficiente. ¡Te esperamos!',
+    'join.button': 'Apúntate',
   },
 } as const;
 
