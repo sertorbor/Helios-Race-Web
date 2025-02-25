@@ -31,6 +31,122 @@ const teamMembers = [
     name: "Operations Lead",
     role: "Project Manager",
     linkedin: "#"
+  },
+  {
+    name: "Team Lead",
+    role: "Project Director",
+  },
+  {
+    name: "David Grueso Conejero",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Sergio Tortosa Borrell",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Power Systems",
+    role: "Solar Technology Expert",
+    linkedin: "#"
+  },
+  {
+    name: "Mechanical Lead",
+    role: "Structural Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Operations Lead",
+    role: "Project Manager",
+    linkedin: "#"
+  },
+  {
+    name: "Team Lead",
+    role: "Project Director",
+  },
+  {
+    name: "David Grueso Conejero",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Sergio Tortosa Borrell",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Power Systems",
+    role: "Solar Technology Expert",
+    linkedin: "#"
+  },
+  {
+    name: "Mechanical Lead",
+    role: "Structural Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Operations Lead",
+    role: "Project Manager",
+    linkedin: "#"
+  },
+  {
+    name: "Team Lead",
+    role: "Project Director",
+  },
+  {
+    name: "David Grueso Conejero",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Sergio Tortosa Borrell",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Power Systems",
+    role: "Solar Technology Expert",
+    linkedin: "#"
+  },
+  {
+    name: "Mechanical Lead",
+    role: "Structural Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Operations Lead",
+    role: "Project Manager",
+    linkedin: "#"
+  },
+  {
+    name: "Team Lead",
+    role: "Project Director",
+  },
+  {
+    name: "David Grueso Conejero",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Sergio Tortosa Borrell",
+    role: "Telemetry Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Power Systems",
+    role: "Solar Technology Expert",
+    linkedin: "#"
+  },
+  {
+    name: "Mechanical Lead",
+    role: "Structural Engineer",
+    linkedin: "#"
+  },
+  {
+    name: "Operations Lead",
+    role: "Project Manager",
+    linkedin: "#"
   }
 ];
 
@@ -77,7 +193,7 @@ export default function Team() {
                 href={member.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block transition-transform hover:scale-105"
+                className="block transition-transform hover:scale-105 text-center"
               >
                 <div className="relative w-60 h-60 rounded-full border-4 border-yellow-400 transition-all duration-500 group hover:border-yellow-500 hover:shadow-none">
                   <img
