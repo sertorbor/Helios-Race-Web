@@ -172,7 +172,7 @@ export default function Team() {
             Conoce a Nuestro Equipo
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-16">
-            Estudiantes y profesores dedicados trabajando juntos para impulsar los límites 
+            Estudiantes trabajando juntos para impulsar los límites 
             de las <span className="font-semibold text-yellow-500">carreras solares </span> 
             y desarrollar la movilidad sostenible del futuro.
           </p>
@@ -195,7 +195,7 @@ export default function Team() {
                 rel="noopener noreferrer"
                 className="block transition-transform hover:scale-105 text-center"
               >
-                <div className="relative w-60 h-60 rounded-full border-4 border-yellow-400 transition-all duration-500 group hover:border-yellow-500 hover:shadow-none">
+                <div className="relative w-60 h-60 rounded-full shadow-[0_0_10px_2px_rgba(255,215,0,2)] transition-all duration-500 group hover:shadow-[0_0_0_4px_rgba(255,215,0,0.7)]">
                   <img
                     src={placeholderImage}
                     alt={member.name}
