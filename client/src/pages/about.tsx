@@ -10,6 +10,7 @@ import Innovacion from "@/assets/engranaje.png";
 import Teamwork from "@/assets/Teamwork.png";
 import Sostenibilidad from "@/assets/leave.png";
 import Compromiso from "@/assets/engranaje.png";
+import BackgroundImage from "@/assets/trespose.jpg"; // Asegúrate de importar la imagen de fondo
 
 export default function About() {
   const { t } = useLanguage();
@@ -18,11 +19,15 @@ export default function About() {
     <div className="py-16 md:py-15 bg-white">
       <div className="container">
         <SectionHeader 
-        title={t('about.title')} 
-        subtitle={t("about.subtitle")}
-        subtitleClassName="text-lg text-muted-foreground max-w-2xl text-left"
+          title={t('about.title')} 
+          subtitle={t("about.subtitle")}
+          subtitleClassName="text-lg text-muted-foreground max-w-2xl text-left"
         />
 
+        {/* 🔹 Línea Divisoria */}
+        <div className="w-full my-[110px]">
+          <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
@@ -92,19 +97,19 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-4 my-[30px]">{t("about.values.title")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-6 my-[60px]">
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
-                <img src={Innovacion} alt="Icono Innovación" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(25,190,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <img src={Innovacion} alt="Icono Innovación" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_0_0_rgba(255,255,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
                 <span><strong style={{color : 'black'}}>{t("about.values.innovation")}:</strong> {t("about.values.innovation.text")}</span>
               </p>
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
-                <img src={Sostenibilidad} alt="Icono Sostenibilidad" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(25,190,0,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <img src={Sostenibilidad} alt="Icono Sostenibilidad" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_0_0_rgba(255,255,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
                 <span><strong style={{color : 'black'}}>{t("about.values.sustainability")}:</strong> {t("about.values.sustainability.text")}</span>
               </p>
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
-                <img src={Teamwork} alt="Icono Trabajo en Equipo" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(250,14,18,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <img src={Teamwork} alt="Icono Trabajo en Equipo" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_0_0_rgba(255,255,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
                 <span><strong style={{color : 'black'}}>{t("about.values.teamwork")}:</strong> {t("about.values.teamwork.text")}</span>
               </p>
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
-                <img src={Compromiso} alt="Icono Compromiso" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(250,190,19,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
+                <img src={Compromiso} alt="Icono Compromiso" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_0_0_rgba(255,255,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
                 <span><strong style={{color : 'black'}}>{t("about.values.commitment")}:</strong> {t("about.values.commitment.text")}</span>
               </p>
             </div>
@@ -125,18 +130,19 @@ export default function About() {
           </motion.div>
         </div>
 
-              {/* 🔹 Línea Divisoria */}
-      <div className="w-full my-[110px]">
-        <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-      </div>
+        {/* 🔹 Línea Divisoria */}
+        <div className="w-full my-[110px]">
+          <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+        </div>
         
-        {/* Nuevo Subapartado */}
+        {/* Subapartado COMPETICIÓN */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-16 text-center background-image h-[600px] w-full"
+          style={{ backgroundImage: `url(${BackgroundImage})` }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px]">{t("about.competition.title")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-1 my-[100px]">
@@ -168,9 +174,9 @@ export default function About() {
         </motion.div>
 
         {/* 🔹 Línea Divisoria */}
-      <div className="w-full my-[110px]">
-        <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-      </div>
+        <div className="w-full my-[110px]">
+          <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+        </div>
 
         {/* Nuevo Subapartado */}
         <motion.div
@@ -202,9 +208,9 @@ export default function About() {
         </motion.div>
 
         {/* 🔹 Línea Divisoria */}
-      <div className="w-full my-[110px]">
-        <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-      </div>
+        <div className="w-full my-[110px]">
+          <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
