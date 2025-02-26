@@ -11,12 +11,8 @@ export default function Vehicle1() {
         
         {/* Encabezado de la sección */}
         <div className="text-left mb-12">
-          <SectionHeader 
-            title="Prototipo 1"
-            titleClassName="text-4xl font-extrabold text-yellow-500 -mb-8"
-            subtitle="Nuestro primer prototipo. El comienzo de un legado."
-            subtitleClassName="text-lg text-gray-600 max-w-2xl mx-auto"
-          />
+          <h2 className="text-4xl font-extrabold text-yellow-500">Prototipo 1</h2>
+          <p className="text-lg text-gray-600 mt-2">Nuestro primer prototipo. El comienzo de un legado.</p>
         </div>
 
         {/* Sección 1: Diseño y Aerodinámica */}
