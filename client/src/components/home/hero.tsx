@@ -87,7 +87,7 @@ export default function Hero() {
       </div>
 
       {/* Contador de cuenta regresiva */}
-      <div className="relative z-10 mb-10">
+      <div className="relative z-10 mb-10 mx-[55px]">
         <Countdown />
       </div>
     </div>

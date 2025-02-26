@@ -13,14 +13,16 @@ export default function Home() {
 
   return (
     <div className="bg-[#474958] text-white">
-      {/* Sección HERO con animación fluida */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <Hero />
-      </motion.div>
+      {/* Contenedor para la sección HERO */}
+      <div className="w-[1663px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <Hero />
+        </motion.div>
+      </div>
 
       {/* Sección Principal con diseño premium */}
       <section className="py-28 bg-gray-800 relative">

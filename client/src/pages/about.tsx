@@ -17,10 +17,12 @@ export default function About() {
   return (
     <div className="py-16 md:py-15 bg-white">
       <div className="container">
-        <SectionHeader title={t('about.title')} />
-        <p className="text-muted-foreground">
-          {t('about.subtitle')}
-        </p>
+        <SectionHeader 
+        title={t('about.title')} 
+        subtitle={t("about.subtitle")}
+        subtitleClassName="text-lg text-muted-foreground max-w-2xl text-left"
+        />
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
@@ -29,7 +31,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-6">{t("about.mission.title")}</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">{t("about.mission.title")}</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">{t("about.mission.text1")}</p>
             <p className="text-gray-700 leading-relaxed">{t("about.mission.text2")}</p>
           </motion.div>

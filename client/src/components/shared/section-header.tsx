@@ -12,7 +12,7 @@ export default function SectionHeader({
   title,
   subtitle,
   centered = false,
-  titleClassName = "text-3xl md:text-4xl font-bold text-gray-900 mb-4",
+  titleClassName = "text-3xl md:text-4xl font-extrabold text-gray-900 mb-4",
   subtitleClassName = "text-lg text-muted-foreground max-w-2xl mx-auto px-4",
 }: SectionHeaderProps) {
   return (
