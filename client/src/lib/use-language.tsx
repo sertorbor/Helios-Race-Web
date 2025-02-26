@@ -12,6 +12,7 @@ const translations = {
   en: {
     'nav.about': 'About',
     'nav.team': 'Team',
+    'nav.vehicles': 'Vehicles',
     'nav.partners': 'Partners',
     'nav.contact': 'Contact',
     'nav.join': 'Join Us',
@@ -87,6 +88,7 @@ const translations = {
   es: {
     'nav.about': 'Acerca',
     'nav.team': 'Equipo',
+    'nav.vehicles': 'Vehículos',
     'nav.partners': 'Partners',
     'nav.contact': 'Contacto',
     'nav.join': 'Únete',
