@@ -35,9 +35,10 @@ export default function Countdown() {
 
   return (
     <div className="bg-yellow-500 text-black rounded-xl p-6 max-w-xl ml-12 shadow-lg -mt-20">
-      <h3 className="text-[29px] font-extrabold text-center drop-shadow-lg mb-6 uppercase tracking-wide text-[#121620]">  
-        2026 Solar Racing Challenge
+      <h3 className="text-[26px] font-extrabold text-center drop-shadow-lg mb-6 tracking-wide text-[#121620]">
+        <span className="text-[#121620] lowercase font-extrabold">i</span><span className="text-[#121620] font-extrabold uppercase">ESC</span> 2026 SOLAR RACING CHALLENGE
       </h3>
+
       <div className="flex justify-center gap-6">
         <div className="bg-white text-black rounded-lg p-6 text-center shadow-lg">
           <div className="text-5xl font-extrabold">{timeLeft.days}</div>
