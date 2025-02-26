@@ -138,7 +138,7 @@ export default function About() {
 
       {/* Subapartado COMPETICIÓN */}
       <div className="relative w-full">
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-50" style={{ backgroundImage: `url(${BackgroundImage})` }}></div>
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60 background-fade" style={{ backgroundImage: `url(${BackgroundImage})` }}></div>
         <div className="relative z-10 container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
