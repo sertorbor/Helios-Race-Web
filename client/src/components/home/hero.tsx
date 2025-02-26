@@ -9,21 +9,22 @@ export default function Hero() {
 
   return (
     <div className="relative min-h-[90vh] flex flex-col">
-      {/* Video de fondo con overlay oscuro */}
+      {/* 🎥 Video de fondo con overlay oscuro */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="YOUR_VIDEO_URL" type="video/mp4" />
+          <source src="videos/video_home.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       </div>
 
-      {/* Contenedor principal */}
+      {/* 📌 Contenedor principal */}
       <div className="container relative z-10 flex-grow flex items-center pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-2xl text-white text-left"
         >
-          {/* Título con efecto de aparición */}
+          {/* 🌟 Título con efecto de aparición */}
           <motion.h1
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +42,7 @@ export default function Hero() {
             {t("hero.title")}
           </motion.h1>
 
-          {/* Subtítulo con traducción dinámica y formato de colores */}
+          {/* 📝 Subtítulo con traducción dinámica y formato de colores */}
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,14 +59,14 @@ export default function Hero() {
             }}
           />
 
-          {/* Botones de acción corregidos */}
+          {/* 🎯 Botones de acción */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex gap-4"
           >
-            {/* Botón "Conoce Más" */}
+            {/* 🔆 Botón "Conoce Más" */}
             <Button
               asChild
               size="lg"
@@ -74,7 +75,7 @@ export default function Hero() {
               <Link href="/about">{t("hero.learnMore")}</Link>
             </Button>
 
-            {/* Botón "Únete al Equipo" - Transparente con hover blanco */}
+            {/* 🔲 Botón "Únete al Equipo" */}
             <Button
               asChild
               size="lg"
@@ -86,7 +87,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Contador de cuenta regresiva */}
+      {/* ⏳ Contador de cuenta regresiva */}
       <div className="relative z-10 mb-10">
         <Countdown />
       </div>
