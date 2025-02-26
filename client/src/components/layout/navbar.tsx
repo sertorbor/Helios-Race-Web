@@ -11,6 +11,7 @@ import logo from "@/assets/HeliosLogoBlancoSolo.png";
 const navLinks = [
   { href: "/about", label: "nav.about" },
   { href: "/team", label: "nav.team" },
+  { href: "/vehicles", label: "nav.vehicles" },
   { href: "/partners", label: "nav.partners" },
   { href: "/contact", label: "nav.contact" },
   { href: "/join", label: "nav.join" },
