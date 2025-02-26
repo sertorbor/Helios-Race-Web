@@ -3,26 +3,30 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import Countdown from "./countdown";
 import { useLanguage } from "@/lib/use-language";
+import Foto4 from "@/assets/foto4.png"; // 📌 Importamos la imagen de fondo
 
 export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative min-h-[90vh] flex flex-col">
-      {/* 🎥 Video de fondo con overlay oscuro */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="videos/video_home.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
-      </div>
+    <div className="relative min-h-[90vh] flex flex-col bg-[#101217]"> {/* Ajuste del color de fondo para una mejor transición */}
+      
+      {/* 🎨 Fondo con imagen y degradado más oscuro y extendido */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(to right, 
+            rgba(16, 18, 23, 1) 5%,  
+            rgba(16, 18, 23, 0.95) 25%, 
+            rgba(16, 18, 23, 0.85) 50%, 
+            rgba(16, 18, 23, 0.5) 75%, 
+            rgba(0, 0, 0, 0) 90%), 
+            url(${Foto4})`,
+          backgroundPosition: "calc(100% + 30px) center",
+          backgroundSize: "75%", // Ajusta la escala sin distorsionar
+          backgroundRepeat: "no-repeat",
+        }}
+      />
 
       {/* 📌 Contenedor principal */}
       <div className="container relative z-10 flex-grow flex items-center pb-24">
@@ -54,8 +58,6 @@ export default function Hero() {
                 .replace("sustainable innovation", `<span class="text-yellow-300 font-semibold">sustainable innovation</span>`)
                 .replace("movilidad solar", `<span class="text-yellow-300 font-semibold">movilidad solar</span>`)
                 .replace("innovación sostenible", `<span class="text-yellow-300 font-semibold">innovación sostenible</span>`)
-                .replace(" a", " a<br>") // Salto de línea después de "a"
-                .replace("compromiso", "compromiso<br>") // Salto de línea después de "compromiso"
             }}
           />
 
