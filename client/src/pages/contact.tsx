@@ -17,8 +17,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/lib/use-language";
 
 export default function Contact() {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const form = useForm<InsertContactMessage>({
     resolver: zodResolver(contactSchema),
@@ -35,14 +37,14 @@ export default function Contact() {
     },
     onSuccess: () => {
       toast({
-        title: "¡Mensaje enviado!",
-        description: "Nos pondremos en contacto contigo lo antes posible",
+        title: t("contact.successTitle"),
+        description: t("contact.successDescription"),
       });
       form.reset();
     },
     onError: (error) => {
       toast({
-        title: "Error",
+        title: t("contact.errorTitle"),
         description: error.message,
         variant: "destructive",
       });
@@ -69,13 +71,13 @@ export default function Contact() {
       </div>
       {/* Contenido central */}
       <div className="container max-w-4xl relative z-10">
-      <SectionHeader
-          title="Contáctanos"
-          subtitle={`¿Tienes preguntas o quieres aprender más sobre HeliosRace UPV?\n¡Ponte en contacto con nosotros!`}
+        <SectionHeader
+          title={t("contact.title")}
+          subtitle={t("contact.subtitle")}
           centered
           titleClassName="text-4xl font-extrabold text-gray-900 mb-4"
           subtitleClassName="text-gray-600 mb-6 max-w-3xl mx-auto whitespace-pre-line"
-      />
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,18 +87,20 @@ export default function Contact() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
-              className="space-y-6 "
+              className="space-y-6"
             >
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nombre</FormLabel>
+                    <FormLabel>{t("contact.nameLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tu nombre" 
-                      className="shadow-lg hover:shadow-xl"
-                      {...field} />
+                      <Input
+                        placeholder={t("contact.namePlaceholder")}
+                        className="shadow-lg hover:shadow-xl"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -108,11 +112,13 @@ export default function Contact() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>{t("contact.emailLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="tu.email@ejemplo.com" 
-                      className="shadow-lg hover:shadow-xl"
-                      {...field} />
+                      <Input
+                        placeholder={t("contact.emailPlaceholder")}
+                        className="shadow-lg hover:shadow-xl"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -124,10 +130,10 @@ export default function Contact() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Mensaje</FormLabel>
+                    <FormLabel>{t("contact.messageLabel")}</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Tu mensaje..."
+                        placeholder={t("contact.messagePlaceholder")}
                         className="min-h-[150px] shadow-lg hover:shadow-xl"
                         {...field}
                       />
@@ -143,7 +149,7 @@ export default function Contact() {
                 className="w-full bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
                 disabled={mutation.isPending}
               >
-                {mutation.isPending ? "Enviando..." : "Enviar mensaje"}
+                {mutation.isPending ? t("contact.sendingButton") : t("contact.submitButton")}
               </Button>
             </form>
           </Form>

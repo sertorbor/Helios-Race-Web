@@ -19,7 +19,7 @@ export default function About() {
       <div className="container">
         <SectionHeader title={t('about.title')} />
         <p className="text-muted-foreground">
-          Desde la tierra del sol, para el resto del mundo. Conoce nuestra historia, nuestra misión y nuestros valores.
+          {t('about.subtitle')}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
@@ -72,9 +72,9 @@ export default function About() {
             transition={{ duration: 1.5 }}
             className="md:order-2 order-1"
           >
-            <h3 className="text-2xl font-bold mb-4">Visión</h3>
+            <h3 className="text-2xl font-bold mb-4">{t("about.vision.title")}</h3>
             <p className="text-muted-foreground mb-6">
-            Ser un referente internacional en el desarrollo de vehículos eléctricos solares, liderando la investigación y la aplicación de soluciones innovadoras que contribuyan a la creación de un sistema de transporte sostenible, eficiente y accesible. Aspiramos a inspirar a la sociedad a adoptar un estilo de vida más respetuoso con el medio ambiente, demostrando el potencial de la energía solar como fuente de energía limpia y renovable para la movilidad.
+              {t("about.vision.text")}
             </p>
           </motion.div>
         </div>
@@ -87,23 +87,23 @@ export default function About() {
             transition={{ duration: 1.5 }}
             className="md:order-1 order-2"
           >
-            <h3 className="text-2xl font-bold mb-4 my-[30px]">Valores</h3>
+            <h3 className="text-2xl font-bold mb-4 my-[30px]">{t("about.values.title")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-6 my-[60px]">
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
                 <img src={Innovacion} alt="Icono Innovación" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(25,190,190,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
-                <span><strong style={{color : 'black'}}>Innovación:</strong> Fomentamos la creatividad, la experimentación y la búsqueda constante de nuevas soluciones para mejorar el rendimiento, la eficiencia y la sostenibilidad de nuestros vehículos.</span>
+                <span><strong style={{color : 'black'}}>{t("about.values.innovation")}:</strong> {t("about.values.innovation.text")}</span>
               </p>
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
                 <img src={Sostenibilidad} alt="Icono Sostenibilidad" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(25,190,0,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
-                <span><strong style={{color : 'black'}}>Sostenibilidad:</strong> Priorizamos el uso de materiales y tecnologías respetuosas con el medio ambiente, minimizando el impacto ambiental de nuestros procesos y productos.</span>
+                <span><strong style={{color : 'black'}}>{t("about.values.sustainability")}:</strong> {t("about.values.sustainability.text")}</span>
               </p>
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
                 <img src={Teamwork} alt="Icono Trabajo en Equipo" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(250,14,18,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
-                <span><strong style={{color : 'black'}}>Trabajo en Equipo:</strong> Creemos en la colaboración, el respeto mutuo y la comunicación abierta como pilares fundamentales para alcanzar nuestros objetivos.</span>
+                <span><strong style={{color : 'black'}}>{t("about.values.teamwork")}:</strong> {t("about.values.teamwork.text")}</span>
               </p>
               <p className="text-muted-foreground mb-6 text-center max-w-xs flex items-center justify-center self-start">
                 <img src={Compromiso} alt="Icono Compromiso" className="w-8 h-8 mr-2 self-start rounded-full shadow-[0_0_15px_3px_rgba(250,190,19,5)] transition-all duration-500 group hover:shadow-[0_0_15px_5px_rgba(25,120,190,5)]" />
-                <span><strong style={{color : 'black'}}>Compromiso:</strong> Estamos dedicados a la misión de HeliosRace UPV, asumiendo la responsabilidad de nuestros actos y trabajando con pasión y determinación para lograr nuestros objetivos.</span>
+                <span><strong style={{color : 'black'}}>{t("about.values.commitment")}:</strong> {t("about.values.commitment.text")}</span>
               </p>
             </div>
           </motion.div>
@@ -136,7 +136,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mt-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px]">Competición</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px]">{t("about.competition.title")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-1 my-[100px]">
             <div className="text-center">
               <img
@@ -147,7 +147,7 @@ export default function About() {
             </div>
             <div>
               <p className="text-muted-foreground mb-6 my-2 text-left">
-                La ILumen European Solar Challege <a href="https://www.europeansolarchallenge.eu/" target="_blank" rel="noopener noreferrer"style= {{color: 'blue'}}>(IESC)</a> busca el desarrollo de la tecnología de propulsión de vehículos por medio de energía de procedencia solar, mediante la competitividad amistosa entre los equipos participantes. Durante los días 22 y 23 de agosto de 2024, el equipo de HeliosRaceUPV tuvo el placer y oportunidad de participar junto a su primer prototipo en el <a href="https://maps.app.goo.gl/9Yc2rbWhqkRX5nCq8" target="_blank" rel="noopener noreferrer"style= {{color: 'blue'}}>circuito Zolder</a> en Heusden-Zolder, Bélgica.
+                {t("about.competition.text")}
               </p>
               <div className="grid grid-cols-2 gap-4 mt-4">
                 <img
@@ -178,7 +178,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mt-16 text-center my-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Conoce nuestros vehículos</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("about.vehicles.title")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-[70px]">
             <div className="text-center my-10">
               <img
@@ -186,7 +186,7 @@ export default function About() {
                 alt="Imagen 1"
                 className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
-              <p className="text-muted-foreground">Nuestro primer prototipo. El comienzo de un legado.</p>
+              <p className="text-muted-foreground">{t("about.vehicles.prototype1")}</p>
             </div>
             <div className="text-center my-10">
               <img
@@ -194,7 +194,7 @@ export default function About() {
                 alt="Imagen 2"
                 className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
               />
-              <p className="text-muted-foreground">Nuestra segunda apuesta. El futuro de Helios Race UPV.</p>
+              <p className="text-muted-foreground">{t("about.vehicles.prototype2")}</p>
             </div>
           </div>
         </motion.div>
@@ -212,7 +212,7 @@ export default function About() {
           className="mt-16"
         >
           <h3 className="text-2xl font-bold mb-6 text-center">
-            Encuéntranos <span style={{ color: '#f5b914' }}>aquí</span>
+            {t("about.findUs.title")} <span style={{ color: '#f5b914' }}>aquí</span>
           </h3>
           <div className="my-[70px] w-full h-[400px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl">
             <iframe

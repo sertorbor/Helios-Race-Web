@@ -171,12 +171,10 @@ export default function Team() {
           className="text-center"
         >
           <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
-            Conoce a Nuestro Equipo
+            {t('team.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-16">
-            Estudiantes trabajando juntos para impulsar los límites 
-            de las <span className="font-semibold text-yellow-500">carreras solares </span> 
-            y desarrollar la movilidad sostenible del futuro.
+            {t('team.subtitle')}
           </p>
         </motion.div>
 

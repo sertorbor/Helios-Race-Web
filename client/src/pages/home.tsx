@@ -6,8 +6,11 @@ import foto1 from "@/assets/foto1.jpg";
 import foto2 from "@/assets/foto2.jpg";
 import foto3 from "@/assets/foto3.jpg";
 import foto4 from "@/assets/foto4.png";
+import { useLanguage } from "@/lib/use-language";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-[#474958] text-white">
       {/* Sección HERO con animación fluida */}
@@ -31,7 +34,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-6xl font-extrabold text-yellow-400 drop-shadow-lg tracking-wide"
           >
-            The Future of Solar Racing
+            {t('home.title')}
           </motion.h2>
 
           {/* Subtítulo refinado y alineado */}
@@ -42,8 +45,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mt-5 text-lg md:text-xl font-light text-gray-300 max-w-3xl mx-auto leading-snug"
           >
-            Driving the next generation of <span className="text-yellow-300 font-semibold">solar-powered mobility </span>  
-            with a commitment to <span className="text-yellow-300 font-semibold">sustainable innovation</span> and cutting-edge technology.
+            {t('home.subtitle')}
           </motion.p>
 
           {/* Separador decorativo mejorado */}
@@ -53,18 +55,18 @@ export default function Home() {
         <div className="container mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
           {[
             {
-              title: "Innovation",
-              description: "We continuously explore new frontiers in aerodynamics, energy efficiency, and solar mobility. By integrating state-of-the-art technologies, we optimize performance and push the limits of sustainable engineering.",
+              title: t('home.features.innovation.title'),
+              description: t('home.features.innovation.description'),
               image: foto2
             },
             { 
-              title: "Sustainability",
-              description: "Sustainability is at the heart of our mission. Through cutting-edge research in renewable energy, we aim to create eco-friendly transport solutions that contribute to a cleaner, more efficient future.",
+              title: t('home.features.sustainability.title'),
+              description: t('home.features.sustainability.description'),
               image: foto4
             },
             {
-              title: "Education",
-              description: "Our team fosters knowledge-sharing and hands-on experience, empowering the next generation of engineers. We provide real-world challenges that enhance technical skills and drive future innovation.",
+              title: t('home.features.education.title'),
+              description: t('home.features.education.description'),
               image: foto3
             }
           ].map((feature, index) => (

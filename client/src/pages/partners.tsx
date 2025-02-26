@@ -8,8 +8,10 @@ import logoGE from "@/assets/LOGOGE.png";
 import logo from "@/assets/LOGOAUTOPRIETO.jpeg";
 import logoFord from "@/assets/LOGOFORD.png";
 import logoWurth from "@/assets/LOGOWURTH.png";
+import { useLanguage } from "@/lib/use-language";
 
 export default function Partners() {
+  const { t } = useLanguage();
   const partners = [
     { image: logoUPV, url: "https://www.upv.es" },
     { image: logoGE, url: "https://generacionespontanea.upv.es" },
@@ -31,14 +33,13 @@ export default function Partners() {
           className="text-center"
         >
           <h3 className="text-3xl font-extrabold text-gray-900 mb-4">
-            Sé parte de nuestra red de innovación
+            {t('partners.becomePartner.title')}
           </h3>
           <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-            Únete a <span className="font-semibold text-yellow-500">Helios Race UPV</span> y forma parte del cambio hacia un futuro de movilidad sostenible. 
-            Colabora con nosotros y ayúdanos a desarrollar las tecnologías del mañana.
+            {t('partners.becomePartner.text')}
           </p>
           <Button asChild size="lg" className="bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400">
-            <Link href="/contact">Conviértete en Partner</Link>
+            <Link href="/contact">{t('partners.becomePartner.title')}</Link>
           </Button>
         </motion.div>
 
