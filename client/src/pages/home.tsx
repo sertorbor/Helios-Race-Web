@@ -32,27 +32,24 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-6xl font-extrabold text-yellow-400 drop-shadow-lg tracking-wide"
+            className="text-5xl font-extrabold text-yellow-400 drop-shadow-lg tracking-wide -mt-6"
           >
             {t('home.title')}
           </motion.h2>
 
-          {/* Subtítulo refinado y alineado */}
+          {/* Subtítulo con HTML renderizado correctamente */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="mt-5 text-lg md:text-xl font-light text-gray-300 max-w-3xl mx-auto leading-snug"
-          >
-            {t('home.subtitle')}
-          </motion.p>
-
-          {/* Separador decorativo mejorado */}
+            dangerouslySetInnerHTML={{ __html: t("home.subtitle") }} // ✅ Renderiza el HTML correctamente
+          />
         </div>
 
         {/* Sección de Tarjetas con diseño más profesional */}
-        <div className="container mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+        <div className="container mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
           {[
             {
               title: t('home.features.innovation.title'),
