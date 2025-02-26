@@ -5,7 +5,7 @@ import Hero from "@/components/home/hero";
 import foto1 from "@/assets/foto1.jpg";
 import foto2 from "@/assets/foto2.jpg";
 import foto3 from "@/assets/foto3.jpg";
-import foto4 from "@/assets/foto4.png";
+import foto5 from "@/assets/foto5.png";
 import { useLanguage } from "@/lib/use-language";
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
             { 
               title: t('home.features.sustainability.title'),
               description: t('home.features.sustainability.description'),
-              image: foto4
+              image: foto5
             },
             {
               title: t('home.features.education.title'),
