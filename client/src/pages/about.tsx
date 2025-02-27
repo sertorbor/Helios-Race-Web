@@ -2,22 +2,14 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
 import mision from "@/assets/trespose.jpg";
-import CocheUno from "@/assets/Prototipo1.jpeg";
-import CocheDos from "@/assets/Prototipo1.jpeg";
 import CompetiPeq1 from "@/assets/trespose.jpg";
 import CompetiPeq2 from "@/assets/trespose.jpg";
 import Innovacion from "@/assets/engranaje.png";
 import Teamwork from "@/assets/Teamwork.png";
 import Sostenibilidad from "@/assets/leave.png";
 import Compromiso from "@/assets/engranaje.png";
-import BackgroundImage from "@/assets/circuito.jpg"; // Asegúrate de importar la imagen de fondo
+import BackgroundImage from "@/assets/circuito.jpg";
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
 
 export default function About() {
   const { t } = useLanguage();
@@ -31,12 +23,6 @@ export default function About() {
           subtitleClassName="text-lg text-muted-foreground max-w-2xl text-left"
         />
 
-        {/* Botones de navegación */}
-        <nav>
-          <button onClick={() => { scrollToTop(); window.location.href = './Team'; }}>Hola</button>
-          <button onClick={() => { scrollToTop(); window.location.href = '#section2'; }}>Sección 2</button>
-          <button onClick={() => { scrollToTop(); window.location.href = '#section3'; }}>Sección 3</button>
-        </nav>
 
         {/* 🔹 Línea Divisoria */}
         <div className="w-full my-[110px]">
@@ -192,40 +178,7 @@ export default function About() {
       </div>
 
       <div className="container">
-        {/* 🔹 Línea Divisoria */}
-        <div className="w-full my-[110px]">
-          <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-        </div>
-
-        {/* Nuevo Subapartado */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-center my-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("about.vehicles.title")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-[70px]">
-            <div className="text-center my-10">
-              <img
-                src={CocheUno}
-                alt="Imagen 1"
-                className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
-              />
-              <p className="text-muted-foreground">{t("about.vehicles.prototype1")}</p>
-            </div>
-            <div className="text-center my-10">
-              <img
-                src={CocheDos}
-                alt="Imagen 2"
-                className="w-2/3 h-auto mx-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
-              />
-              <p className="text-muted-foreground">{t("about.vehicles.prototype2")}</p>
-            </div>
-          </div>
-        </motion.div>
-
+        
         {/* 🔹 Línea Divisoria */}
         <div className="w-full my-[110px]">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
