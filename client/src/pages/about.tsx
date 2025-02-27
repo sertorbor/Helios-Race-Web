@@ -12,6 +12,13 @@ import Sostenibilidad from "@/assets/leave.png";
 import Compromiso from "@/assets/engranaje.png";
 import BackgroundImage from "@/assets/circuito.jpg"; // Asegúrate de importar la imagen de fondo
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
 export default function About() {
   const { t } = useLanguage();
 
@@ -23,6 +30,13 @@ export default function About() {
           subtitle={t("about.subtitle")}
           subtitleClassName="text-lg text-muted-foreground max-w-2xl text-left"
         />
+
+        {/* Botones de navegación */}
+        <nav>
+          <button onClick={() => { scrollToTop(); window.location.href = './Team'; }}>Hola</button>
+          <button onClick={() => { scrollToTop(); window.location.href = '#section2'; }}>Sección 2</button>
+          <button onClick={() => { scrollToTop(); window.location.href = '#section3'; }}>Sección 3</button>
+        </nav>
 
         {/* 🔹 Línea Divisoria */}
         <div className="w-full my-[110px]">
@@ -38,7 +52,6 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-6">{t("about.mission.title")}</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">{t("about.mission.text1")}</p>
-            <p className="text-gray-700 leading-relaxed">{t("about.mission.text2")}</p>
           </motion.div>
 
           <motion.div

@@ -8,6 +8,13 @@ import { useLanguage } from "@/lib/use-language";
 import { ES, GB } from 'country-flag-icons/react/3x2';
 import logo from "@/assets/HeliosLogoBlancoSolo.png";
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
 const navLinks = [
   { href: "/about", label: "nav.about" },
   { href: "/team", label: "nav.team" },
@@ -44,7 +51,7 @@ export default function Navbar() {
             <SheetContent className="w-[260px] sm:w-[320px] bg-[#1a1f2e] text-white ">
               <nav className="flex flex-col gap-4 mt-6">
                 {navLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
+                  <Link key={link.href} href={link.href} onClick={scrollToTop}>
                     <span
                       className={`cursor-pointer text-xl font-semibold transition-all duration-300 hover:scale-105 font-inter relative 
                         ${
@@ -74,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <nav className="flex items-center space-x-8">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
+                <Link key={link.href} href={link.href} onClick={scrollToTop}>
                   <span
                     className={`cursor-pointer text-xl font-semibold transition-all duration-300 hover:scale-105 font-inter relative
                       ${
