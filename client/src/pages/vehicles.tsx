@@ -6,6 +6,13 @@ import CocheDos from "@/assets/foto1.jpg";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/use-language";
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
 export default function Vehicles() {
   const { t } = useLanguage();
 
@@ -46,7 +53,7 @@ export default function Vehicles() {
             <p className="mt-4 text-gray-500 transition-all duration-500 ease-in-out">
               {t('vehicles.prototype1.description2')}
             </p>
-            <Link href="/vehicles/vehicle1">
+            <Link href="/vehicles/vehicle1" onClick={scrollToTop}>
               <Button
                 size="lg"
                 className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
@@ -75,7 +82,7 @@ export default function Vehicles() {
             <p className="mt-4 text-gray-500 transition-all duration-500 ease-in-out">
               {t('vehicles.prototype2.description2')}
             </p>
-            <Link href="/vehicles/vehicle2">
+            <Link href="/vehicles/vehicle2" onClick={scrollToTop}>
               <Button
                 size="lg"
                 className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
