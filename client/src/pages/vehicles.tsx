@@ -4,8 +4,11 @@ import SectionHeader from "@/components/shared/section-header";
 import CocheUno from "@/assets/foto1.jpg";
 import CocheDos from "@/assets/foto1.jpg";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/use-language";
 
 export default function Vehicles() {
+  const { t } = useLanguage();
+
   return (
     <div className="py-16 bg-white text-gray-900">
       <div className="container">
@@ -13,18 +16,18 @@ export default function Vehicles() {
         {/* Encabezado de la Sección - Más Compacto */}
         <div className="text-center mb-12">
           <SectionHeader 
-            title="Nuestros Vehículos" 
+            title={t('vehicles.title')} 
             titleClassName="text-4xl font-extrabold text-gray-900 -mb-8"
           />
           <p className="text-lg text-gray-600 max-w-full whitespace-nowrap mx-auto">
-            Descubre nuestros prototipos diseñados con tecnología avanzada y un enfoque en la eficiencia energética.
+            {t('vehicles.subtitle')}
           </p>
         </div>
 
         {/* Prototipo 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
-            <img src={CocheUno} alt="Prototipo 1" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={CocheUno} alt={t('vehicles.prototype1.title')} className="absolute inset-0 w-full h-full object-cover" />
           </div>
 
           <motion.div
@@ -35,23 +38,20 @@ export default function Vehicles() {
             className="text-left"
           >
             <h3 className="text-3xl font-extrabold text-gray-900 mb-4 hover:text-yellow-500 transition-all duration-300 ease-in-out">
-              Prototipo 1
+              {t('vehicles.prototype1.title')}
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed transition-all duration-500 ease-in-out">
-              Nuestro primer vehículo solar fue diseñado para maximizar la eficiencia y aerodinámica. 
-              Cuenta con un chasis ultraligero y células fotovoltaicas de alto rendimiento, permitiendo 
-              una optimización energética sobresaliente.
+              {t('vehicles.prototype1.description1')}
             </p>
             <p className="mt-4 text-gray-500 transition-all duration-500 ease-in-out">
-              Con una autonomía excepcional y materiales innovadores, el Prototipo 1 marcó un hito en 
-              nuestra historia al competir en prestigiosos eventos internacionales.
+              {t('vehicles.prototype1.description2')}
             </p>
             <Link href="/vehicles/vehicle1">
               <Button
                 size="lg"
                 className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
               >
-                Conocer más →
+                {t('vehicles.learnMore')}
               </Button>
             </Link>
           </motion.div>
@@ -67,29 +67,26 @@ export default function Vehicles() {
             className="text-left order-2 md:order-1"
           >
             <h3 className="text-3xl font-extrabold text-gray-900 mb-4 hover:text-yellow-500 transition-all duration-300 ease-in-out">
-              Prototipo 2
+              {t('vehicles.prototype2.title')}
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed transition-all duration-500 ease-in-out">
-              Con un enfoque en innovación y sostenibilidad, el Prototipo 2 incorpora mejoras en la 
-              aerodinámica y un sistema de gestión energética más eficiente. Gracias a su diseño 
-              optimizado, este modelo supera los estándares de rendimiento en competiciones solares.
+              {t('vehicles.prototype2.description1')}
             </p>
             <p className="mt-4 text-gray-500 transition-all duration-500 ease-in-out">
-              Desde su concepción, este prototipo ha sido diseñado para maximizar la velocidad y 
-              autonomía, reduciendo el impacto ambiental y promoviendo una movilidad sostenible.
+              {t('vehicles.prototype2.description2')}
             </p>
             <Link href="/vehicles/vehicle2">
               <Button
                 size="lg"
                 className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
               >
-                Conocer más →
+                {t('vehicles.learnMore')}
               </Button>
             </Link>
           </motion.div>
 
           <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
-            <img src={CocheDos} alt="Prototipo 2" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={CocheDos} alt={t('vehicles.prototype2.title')} className="absolute inset-0 w-full h-full object-cover" />
           </div>
         </div>
 
