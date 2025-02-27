@@ -10,7 +10,14 @@ import Innovacion from "@/assets/engranaje.png";
 import Teamwork from "@/assets/Teamwork.png";
 import Sostenibilidad from "@/assets/leave.png";
 import Compromiso from "@/assets/engranaje.png";
-import BackgroundImage from "@/assets/trespose.jpg"; // Asegúrate de importar la imagen de fondo
+import BackgroundImage from "@/assets/circuito.jpg"; // Asegúrate de importar la imagen de fondo
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
 
 export default function About() {
   const { t } = useLanguage();
@@ -23,6 +30,13 @@ export default function About() {
           subtitle={t("about.subtitle")}
           subtitleClassName="text-lg text-muted-foreground max-w-2xl text-left"
         />
+
+        {/* Botones de navegación */}
+        <nav>
+          <button onClick={() => { scrollToTop(); window.location.href = './Team'; }}>Hola</button>
+          <button onClick={() => { scrollToTop(); window.location.href = '#section2'; }}>Sección 2</button>
+          <button onClick={() => { scrollToTop(); window.location.href = '#section3'; }}>Sección 3</button>
+        </nav>
 
         {/* 🔹 Línea Divisoria */}
         <div className="w-full my-[110px]">
@@ -38,7 +52,6 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-6">{t("about.mission.title")}</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">{t("about.mission.text1")}</p>
-            <p className="text-gray-700 leading-relaxed">{t("about.mission.text2")}</p>
           </motion.div>
 
           <motion.div
@@ -134,45 +147,51 @@ export default function About() {
         <div className="w-full my-[110px]">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
         </div>
-        
-        {/* Subapartado COMPETICIÓN */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-center background-image h-[600px] w-full"
-          style={{ backgroundImage: `url(${BackgroundImage})` }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px]">{t("about.competition.title")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-1 my-[100px]">
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
-                alt="Imagen Competicion"
-                className="w-4/5 h-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
-              />
-            </div>
-            <div>
-              <p className="text-muted-foreground mb-6 my-2 text-left">
-                {t("about.competition.text")}
-              </p>
-              <div className="grid grid-cols-2 gap-4 mt-4">
+      </div>
+
+      {/* Subapartado COMPETICIÓN */}
+      <div className="relative w-full">
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60 background-fade" style={{ backgroundImage: `url(${BackgroundImage})` }}></div>
+        <div className="relative z-10 container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 text-center h-[600px] w-full"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px] font-permanent-marker-regular">{t("about.competition.title")}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 my-[100px]">
+              <div className="text-center">
                 <img
-                  src={CompetiPeq1}
-                  alt="Imagen 3"
-                  className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-                />
-                <img
-                  src={CompetiPeq2}
-                  alt="Imagen 4"
-                  className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                  alt="Imagen Competicion"
+                  className="w-4/5 h-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
                 />
               </div>
+              <div>
+                <p className="mb-6 my-2 text-left">
+                  {t("about.competition.text")}
+                </p>
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  <img
+                    src={CompetiPeq1}
+                    alt="Imagen 3"
+                    className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  />
+                  <img
+                    src={CompetiPeq2}
+                    alt="Imagen 4"
+                    className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
+      </div>
 
+      <div className="container">
         {/* 🔹 Línea Divisoria */}
         <div className="w-full my-[110px]">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
