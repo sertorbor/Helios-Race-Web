@@ -17,55 +17,41 @@ import Fotoperfil13 from "@/assets/logo.png";
 import Fotoperfil14 from "@/assets/logo.png";
 import Fotoperfil15 from "@/assets/logo.png";
 import Fotoperfil16 from "@/assets/logo.png";
-import Fotoperfil17 from "@/assets/logo.png";
-import Fotoperfil18 from "@/assets/logo.png";
-import Fotoperfil19 from "@/assets/logo.png";
-import Fotoperfil20 from "@/assets/logo.png";
-import Fotoperfil21 from "@/assets/logo.png";
-import Fotoperfil22 from "@/assets/logo.png";
-import Fotoperfil23 from "@/assets/logo.png";
-import Fotoperfil24 from "@/assets/logo.png";
-import Fotoperfil25 from "@/assets/logo.png";
-import Fotoperfil26 from "@/assets/logo.png";
-import Fotoperfil27 from "@/assets/logo.png";
-import Fotoperfil28 from "@/assets/logo.png";
-import Fotoperfil29 from "@/assets/logo.png";
-import Fotoperfil30 from "@/assets/logo.png";
 
 const teamMembers = [
   {
-    name: "Francisco Javier Fernandez Sanmartín",
-    role: "Team Leader",
-    linkedin: "https://www.linkedin.com/in/francisco-javier-fernandez-sanmart%C3%ADn-273a5724b/",
+    name: "Ignacio García Bensusan",
+    role: "Project Manager",
+    linkedin: "https://www.linkedin.com/in/ignacio-garc%C3%ADa-9aa142256/",
     image: Fotoperfil1
   },
   {
-    name: "David Grueso Conejero",
-    role: "Telemetry Engineer",
-    linkedin: "https://www.linkedin.com/in/david-grueso-conejero-833755235/",
+    name: "Javier Fernandez Sanmartín",
+    role: "Head of Mechanics",
+    linkedin: "https://www.linkedin.com/in/francisco-javier-fernandez-sanmart%C3%ADn-273a5724b/",
     image: Fotoperfil2
   },
   {
-    name: "Sergio Tortosa Borrell",
-    role: "Telemetry Engineer",
-    linkedin: "https://www.linkedin.com/in/sergio-tortosa-borrell-8252052a0/",
+    name: "Antonio Melero Calvete",
+    role: "Head of Electronics",
+    linkedin: "https://www.linkedin.com/in/antonio-melero-calvete-b91ab6252/",
     image: Fotoperfil3
   },
   {
-    name: "Alejandro Espí Cambra",
-    role: "Telemetry Engineer",
-    linkedin: "https://www.linkedin.com/in/alejandro-espi-cambra/",
+    name: "Saul Ferrer Zaragoza",
+    role: "Battery and Photovoltaic Engineer",
+    linkedin: "https://www.linkedin.com/in/saul-ferrer-zaragoza-602b96230/",
     image: Fotoperfil4
   },
   {
-    name: "Antonio Melero Calvete",
-    role: "Solar Technology Expert",
-    linkedin: "https://www.linkedin.com/in/antonio-melero-calvete-b91ab6252/",
+    name: "Alejandro Espí Cambra",
+    role: "Electronics Engineer",
+    linkedin: "https://www.linkedin.com/in/alejandro-espi-cambra/",
     image: Fotoperfil5
   },
   {
     name: "Ruben Verdeguer Asensio",
-    role: "Telemetry Engineer",
+    role: "Electronics Engineer",
     linkedin: "https://www.linkedin.com/in/ruben-verdeguer-asensio/",
     image: Fotoperfil6
   },
@@ -76,139 +62,58 @@ const teamMembers = [
     image: Fotoperfil7
   },
   {
-    name: "Jorge Rubio Valdés",
-    role: "Steering and Suspension Engineer",
-    linkedin: "https://www.linkedin.com/in/jorge-rubio-vald%C3%A9s/",
+    name: "Robin Majchrowicz",
+    role: "Mechanics and Structure Engineer",
+    linkedin: "https://www.linkedin.com/in/robin-majchrowicz-943a65251/",
     image: Fotoperfil8
   },
   {
-    name: "Lorena Lacasa López",
-    role: "Battery Engineer",
-    linkedin: "https://www.linkedin.com/in/lorena-lacasa-l%C3%B3pez-a4879033b/",
+    name: "David Grueso Conejero",
+    role: "Electronics Engineer",
+    linkedin: "https://www.linkedin.com/in/david-grueso-conejero-833755235/",
     image: Fotoperfil9
+  },
+  {
+    name: "Sergio Tortosa Borrell",
+    role: "Telemetry Engineer",
+    linkedin: "https://www.linkedin.com/in/sergio-tortosa-borrell-8252052a0/",
+    image: Fotoperfil10
+  },
+  {
+    name: "Jorge Rubio Valdés",
+    role: "Mechanical Engineer",
+    linkedin: "https://www.linkedin.com/in/jorge-rubio-vald%C3%A9s/",
+    image: Fotoperfil11
+  },
+  {
+    name: "Lorena Lacasa López",
+    role: "Electronics Engineer",
+    linkedin: "https://www.linkedin.com/in/lorena-lacasa-l%C3%B3pez-a4879033b/",
+    image: Fotoperfil12
   },
   {
     name: "Paloma Arnal Estellés",
     role: "Communications Engineer",
     linkedin: "https://www.linkedin.com/in/paloma-arnal-estell%C3%A9s-332a16263/",
-    image: Fotoperfil10
-  },
-  {
-    name: "Saul Ferrer Zaragoza",
-    role: "Fotovoltaical Engineer",
-    linkedin: "https://www.linkedin.com/in/saul-ferrer-zaragoza-602b96230/",
-    image: Fotoperfil11
-  },
-  {
-    name: "Operations Lead",
-    role: "Project Manager",
-    linkedin: "#",
-    image: Fotoperfil12
-  },
-  {
-    name: "Team Lead",
-    role: "Project Director",
     image: Fotoperfil13
   },
   {
-    name: "David Grueso Conejero",
-    role: "Telemetry Engineer",
+    name: "Rafael Navarro Navarro",
+    role: "Aerodynamics Engineer",
     linkedin: "#",
     image: Fotoperfil14
   },
   {
-    name: "Sergio Tortosa Borrell",
-    role: "Telemetry Engineer",
-    linkedin: "#",
+    name: "Taylor Rodríguez Cuéllar",
+    role: "Electronics Engineer",
+    linkedin: "https://www.linkedin.com/in/taylor-rodr%C3%ADguez-cuellar-b186ab277/",
     image: Fotoperfil15
   },
   {
-    name: "Power Systems",
-    role: "Solar Technology Expert",
-    linkedin: "#",
+    name: "Joan Seresola Vicens",
+    role: "Aerodynamics Engineer",
+    linkedin: "https://www.linkedin.com/in/joan-seresola-vicens/",
     image: Fotoperfil16
-  },
-  {
-    name: "Mechanical Lead",
-    role: "Structural Engineer",
-    linkedin: "#",
-    image: Fotoperfil17
-  },
-  {
-    name: "Operations Lead",
-    role: "Project Manager",
-    linkedin: "#",
-    image: Fotoperfil18
-  },
-  {
-    name: "Team Lead",
-    role: "Project Director",
-    image: Fotoperfil19
-  },
-  {
-    name: "David Grueso Conejero",
-    role: "Telemetry Engineer",
-    linkedin: "#",
-    image: Fotoperfil20
-  },
-  {
-    name: "Sergio Tortosa Borrell",
-    role: "Telemetry Engineer",
-    linkedin: "#",
-    image: Fotoperfil21
-  },
-  {
-    name: "Power Systems",
-    role: "Solar Technology Expert",
-    linkedin: "#",
-    image: Fotoperfil22
-  },
-  {
-    name: "Mechanical Lead",
-    role: "Structural Engineer",
-    linkedin: "#",
-    image: Fotoperfil23
-  },
-  {
-    name: "Operations Lead",
-    role: "Project Manager",
-    linkedin: "#",
-    image: Fotoperfil24
-  },
-  {
-    name: "Team Lead",
-    role: "Project Director",
-    image: Fotoperfil25
-  },
-  {
-    name: "David Grueso Conejero",
-    role: "Telemetry Engineer",
-    linkedin: "#",
-    image: Fotoperfil26
-  },
-  {
-    name: "Sergio Tortosa Borrell",
-    role: "Telemetry Engineer",
-    linkedin: "#",
-    image: Fotoperfil27
-  },
-  {
-    name: "Power Systems",
-    role: "Solar Technology Expert",
-    linkedin: "#",
-    image: Fotoperfil28
-  },
-  {
-    name: "Mechanical Lead",
-    role: "Structural Engineer",
-    linkedin: "#",
-    image: Fotoperfil29
-  },
-  {
-    name: "Operations Lead",
-    role: "Project Manager",
-    linkedin: "#",
-    image: Fotoperfil30
   }
 ];
 

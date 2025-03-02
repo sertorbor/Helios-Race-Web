@@ -1,18 +1,32 @@
+import { Link, useLocation } from "wouter";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import Foto1 from "@/assets/foto1.jpg";
 import Foto2 from "@/assets/foto1.jpg";
 import Foto3 from "@/assets/foto1.jpg";
+import { useLanguage } from "@/lib/use-language";
 
 export default function Vehicle1() {
+  const { t } = useLanguage();
+  const [, setLocation] = useLocation();
+
   return (
     <div className="py-16 bg-gray-200 text-gray-900">
-      <div className="container">
+      <div className="container relative">
+
+        {/* Botón de volver a la página anterior */}
+        <Button
+          onClick={() => setLocation('/vehicles')}
+          className="absolute top-0 right-8 mt-4 mr-4 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+        >
+          {t('vehicles.back')}
+        </Button>
         
         {/* Encabezado de la sección */}
         <div className="text-left mb-12">
-          <h2 className="text-4xl font-extrabold text-yellow-500">Prototipo 1</h2>
-          <p className="text-lg text-gray-600 mt-2">Nuestro primer prototipo. El comienzo de un legado.</p>
+          <h2 className="text-4xl font-extrabold text-yellow-500">{t('vehicles1.prototype1.title')}</h2>
+          <p className="text-lg text-gray-600 mt-2">{t('vehicles1.prototype1.subtitle')}</p>
         </div>
 
         {/* Sección 1: Diseño y Aerodinámica */}
@@ -24,7 +38,7 @@ export default function Vehicle1() {
             transition={{ duration: 0.6 }}
             className="order-1 md:order-2 relative h-[400px] rounded-xl overflow-hidden shadow-lg"
           >
-            <img src={Foto1} alt="Prototipo 1 - Vista lateral" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={Foto1} alt={t('vehicles1.prototype1.design.alt')} className="absolute inset-0 w-full h-full object-cover" />
           </motion.div>
 
           <motion.div
@@ -34,10 +48,9 @@ export default function Vehicle1() {
             transition={{ duration: 0.6 }}
             className="order-2 md:order-1"
           >
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-4">Diseño y Aerodinámica</h3>
+            <h3 className="text-3xl font-extrabold text-gray-900 mb-4">{t('vehicles1.prototype1.design.title')}</h3>
             <p className="text-gray-700 text-lg leading-relaxed">
-              El Prototipo 1 fue diseñado con un enfoque en la eficiencia aerodinámica, reduciendo la 
-              resistencia al viento y maximizando el aprovechamiento de la energía solar.
+              {t('vehicles1.prototype1.design.description')}
             </p>
           </motion.div>
         </div>
@@ -51,7 +64,7 @@ export default function Vehicle1() {
             transition={{ duration: 0.6 }}
             className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
           >
-            <img src={Foto2} alt="Prototipo 1 - Interior" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={Foto2} alt={t('vehicles1.prototype1.components.alt')} className="absolute inset-0 w-full h-full object-cover" />
           </motion.div>
 
           <motion.div
@@ -60,10 +73,9 @@ export default function Vehicle1() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-4">Componentes Innovadores</h3>
+            <h3 className="text-3xl font-extrabold text-gray-900 mb-4">{t('vehicles1.prototype1.components.title')}</h3>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Equipado con baterías de última generación y un sistema de monitoreo inteligente, el vehículo 
-              optimiza su rendimiento en tiempo real, asegurando una eficiencia superior en cada competencia.
+              {t('vehicles1.prototype1.components.description')}
             </p>
           </motion.div>
         </div>
@@ -77,7 +89,7 @@ export default function Vehicle1() {
             transition={{ duration: 0.6 }}
             className="order-1 md:order-2 relative h-[400px] rounded-xl overflow-hidden shadow-lg"
           >
-            <img src={Foto3} alt="Prototipo 1 - Competencia" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={Foto3} alt={t('vehicles1.prototype1.achievements.alt')} className="absolute inset-0 w-full h-full object-cover" />
           </motion.div>
 
           <motion.div
@@ -87,10 +99,9 @@ export default function Vehicle1() {
             transition={{ duration: 0.6 }}
             className="order-2 md:order-1"
           >
-            <h3 className="text-3xl font-extrabold text-gray-900 mb-4">Logros en Competencias</h3>
+            <h3 className="text-3xl font-extrabold text-gray-900 mb-4">{t('vehicles1.prototype1.achievements.title')}</h3>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Gracias a su diseño innovador, el Prototipo 1 participó con éxito en múltiples competiciones, 
-              demostrando el potencial de la energía solar en el transporte y alcanzando excelentes resultados.
+              {t('vehicles1.prototype1.achievements.description')}
             </p>
           </motion.div>
         </div>

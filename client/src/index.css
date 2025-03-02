@@ -69,8 +69,11 @@
 /* Define una clase para aplicar la fuente */
 .permanent-marker-regular {
   font-family: 'Permanent Marker', serif;
-  font-weight: 400;
-  font-style: normal;
+}
+
+/* Define una clase para aplicar la fuente */
+.font-permanent-marker {
+  font-family: 'Permanent Marker', cursive;
 }
 
 /* styles.css o global.css */
