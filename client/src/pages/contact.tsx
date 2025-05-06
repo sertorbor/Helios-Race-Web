@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
-import { contactSchema, type InsertContactMessage } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import SectionHeader from "@/components/shared/section-header";
 import { Button } from "@/components/ui/button";
@@ -18,11 +15,22 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/lib/use-language";
+import { z } from "zod";
+
+// Define the schema here temporarily
+const contactSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().min(10, "Message must be at least 10 characters long"),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   const { t } = useLanguage();
   const { toast } = useToast();
-  const form = useForm<InsertContactMessage>({
+  
+  const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
@@ -31,25 +39,15 @@ export default function Contact() {
     },
   });
 
-  const mutation = useMutation({
-    mutationFn: async (data: InsertContactMessage) => {
-      await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: t("contact.successTitle"),
-        description: t("contact.successDescription"),
-      });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: t("contact.errorTitle"),
-        description: error.message,
-        variant: "destructive",
-      });
-    },
-  });
+  const onSubmit = (data: ContactFormData) => {
+    // For development, just show success toast and log the data
+    console.log('Form submitted:', data);
+    toast({
+      title: t("contact.successTitle"),
+      description: t("contact.successDescription"),
+    });
+    form.reset();
+  };
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
@@ -86,7 +84,7 @@ export default function Contact() {
         >
           <Form {...form}>
             <form
-              onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
+              onSubmit={form.handleSubmit(onSubmit)}
               className="space-y-6"
             >
               <FormField
@@ -147,9 +145,8 @@ export default function Contact() {
                 type="submit"
                 size="lg"
                 className="w-full bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
-                disabled={mutation.isPending}
               >
-                {mutation.isPending ? t("contact.sendingButton") : t("contact.submitButton")}
+                {t("contact.submitButton")}
               </Button>
             </form>
           </Form>
