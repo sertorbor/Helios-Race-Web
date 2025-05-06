@@ -55,7 +55,9 @@ export default function Contact() {
         });
         form.reset();
       } else {
-        throw new Error("Failed to send");
+        const resJson = await response.json();
+        console.error("Error response:", resJson);
+        throw new Error("Error al enviar");
       }
     } catch (error) {
       toast({
@@ -67,6 +69,7 @@ export default function Contact() {
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
+      {/* Fondo decorativo */}
       <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -74,7 +77,6 @@ export default function Contact() {
           className="w-full h-full object-cover"
         />
       </div>
-
       <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -83,6 +85,7 @@ export default function Contact() {
         />
       </div>
 
+      {/* Formulario */}
       <div className="container max-w-4xl relative z-10">
         <SectionHeader
           title={t("contact.title")}
@@ -98,7 +101,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-6"
+            >
               <FormField
                 control={form.control}
                 name="name"
@@ -116,6 +122,7 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="email"
@@ -133,6 +140,7 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="message"
@@ -150,6 +158,7 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
+
               <Button
                 type="submit"
                 size="lg"
