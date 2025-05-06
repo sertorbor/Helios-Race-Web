@@ -11,16 +11,16 @@ exports.handler = async (event) => {
   try {
     const { name, email, message } = JSON.parse(event.body);
 
-    // Configura el transporte de nodemailer con Gmail
-    let transporter = nodemailer.createTransport({
+    // Configurar transporte con credenciales del entorno
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.CONTACT_EMAIL,      // ✅ correcto
-        pass: process.env.EMAIL_PASS,         // ✅ corregido aquí (antes decía CONTACT_EMAIL_PASS)
+        user: process.env.CONTACT_EMAIL,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Contenido del correo
+    // Enviar correo
     await transporter.sendMail({
       from: `"HeliosRace Contact" <${email}>`,
       to: process.env.CONTACT_EMAIL,
@@ -38,7 +38,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ message: "Correo enviado correctamente" }),
     };
   } catch (err) {
-    console.error("Error al enviar:", err);
+    console.error("Error al enviar correo:", err);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: "Fallo al enviar el correo" }),

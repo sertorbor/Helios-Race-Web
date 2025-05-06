@@ -17,7 +17,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/lib/use-language";
 import { z } from "zod";
 
-// Validación de campos
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
@@ -68,7 +67,6 @@ export default function Contact() {
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
-      {/* Imagen izquierda */}
       <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -77,7 +75,6 @@ export default function Contact() {
         />
       </div>
 
-      {/* Imagen derecha */}
       <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -86,7 +83,6 @@ export default function Contact() {
         />
       </div>
 
-      {/* Contenido central */}
       <div className="container max-w-4xl relative z-10">
         <SectionHeader
           title={t("contact.title")}
@@ -102,10 +98,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-6"
-            >
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
                 control={form.control}
                 name="name"
@@ -123,7 +116,6 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
                 name="email"
@@ -141,7 +133,6 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
                 name="message"
@@ -159,7 +150,6 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
-
               <Button
                 type="submit"
                 size="lg"
