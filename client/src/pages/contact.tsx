@@ -17,7 +17,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/lib/use-language";
 import { z } from "zod";
 
-// Define the schema here temporarily
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
@@ -29,7 +28,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export default function Contact() {
   const { t } = useLanguage();
   const { toast } = useToast();
-  
+
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -39,14 +38,30 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    // For development, just show success toast and log the data
-    console.log('Form submitted:', data);
-    toast({
-      title: t("contact.successTitle"),
-      description: t("contact.successDescription"),
-    });
-    form.reset();
+  const onSubmit = async (data: ContactFormData) => {
+    const formData = new FormData();
+    formData.append("form-name", "contact");
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      toast({
+        title: t("contact.successTitle"),
+        description: t("contact.successDescription"),
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: t("contact.errorTitle"),
+        description: t("contact.errorDescription"),
+      });
+    }
   };
 
   return (
@@ -59,6 +74,7 @@ export default function Contact() {
           className="w-full h-full object-cover"
         />
       </div>
+
       {/* Imagen derecha */}
       <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
         <img
@@ -67,6 +83,7 @@ export default function Contact() {
           className="w-full h-full object-cover"
         />
       </div>
+
       {/* Contenido central */}
       <div className="container max-w-4xl relative z-10">
         <SectionHeader
@@ -84,9 +101,17 @@ export default function Contact() {
         >
           <Form {...form}>
             <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
               onSubmit={form.handleSubmit(onSubmit)}
               className="space-y-6"
             >
+              {/* Hidden input for Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+
               <FormField
                 control={form.control}
                 name="name"
