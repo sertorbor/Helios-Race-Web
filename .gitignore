@@ -1,6 +1,31 @@
+# Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Production
 dist
+build
+
+# Testing
+coverage
+
+# Misc
 .DS_Store
-server/public
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vite
 vite.config.ts.*
-*.tar.gz
