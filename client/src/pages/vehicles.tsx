@@ -26,9 +26,6 @@ export default function Vehicles() {
             title={t('vehicles.title')} 
             titleClassName="text-4xl font-extrabold text-gray-900 -mb-8"
           />
-          <p className="text-lg text-gray-600 max-w-full whitespace-nowrap mx-auto">
-            {t('vehicles.subtitle')}
-          </p>
         </div>
 
         {/* Prototipo 1 */}
@@ -50,9 +47,7 @@ export default function Vehicles() {
             <p className="text-gray-600 text-lg leading-relaxed transition-all duration-500 ease-in-out">
               {t('vehicles.prototype1.description1')}
             </p>
-            <p className="mt-4 text-gray-500 transition-all duration-500 ease-in-out">
-              {t('vehicles.prototype1.description2')}
-            </p>
+
             <Link href="/vehicles/vehicle1" onClick={scrollToTop}>
               <Button
                 size="lg"
@@ -79,9 +74,7 @@ export default function Vehicles() {
             <p className="text-gray-600 text-lg leading-relaxed transition-all duration-500 ease-in-out">
               {t('vehicles.prototype2.description1')}
             </p>
-            <p className="mt-4 text-gray-500 transition-all duration-500 ease-in-out">
-              {t('vehicles.prototype2.description2')}
-            </p>
+
             <Link href="/vehicles/vehicle2" onClick={scrollToTop}>
               <Button
                 size="lg"
