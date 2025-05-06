@@ -11,22 +11,24 @@ exports.handler = async (event) => {
   try {
     const { name, email, message } = JSON.parse(event.body);
 
-    // Configura el transporte de nodemailer con Gmail
-    let transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.CONTACT_EMAIL,      // por ejemplo: heliosracedev@gmail.com
-        pass: process.env.CONTACT_EMAIL_PASS, // App Password desde la cuenta de Gmail
+        user: process.env.CONTACT_EMAIL,   // debe ser: heliosracedev@gmail.com
+        pass: process.env.EMAIL_PASS,      // contraseña de aplicación
       },
     });
 
-    // Contenido del correo
     await transporter.sendMail({
       from: `"HeliosRace Contact" <${email}>`,
-      to: "heliosracedev@gmail.com",
+      to: process.env.CONTACT_EMAIL,
       subject: `Nuevo mensaje de contacto de ${name}`,
       text: message,
-      html: `<p><strong>Nombre:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Mensaje:</strong><br/>${message}</p>`,
+      html: `
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mensaje:</strong><br/>${message}</p>
+      `,
     });
 
     return {

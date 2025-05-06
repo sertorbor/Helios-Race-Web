@@ -39,17 +39,14 @@ export default function Contact() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    const formData = new FormData();
-    formData.append("form-name", "contact");
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("message", data.message);
-
     try {
-      await fetch("/", {
+      const res = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
+
+      if (!res.ok) throw new Error("Request failed");
 
       toast({
         title: t("contact.successTitle"),
@@ -66,7 +63,6 @@ export default function Contact() {
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
-      {/* Imagen izquierda */}
       <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -75,7 +71,6 @@ export default function Contact() {
         />
       </div>
 
-      {/* Imagen derecha */}
       <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -84,7 +79,6 @@ export default function Contact() {
         />
       </div>
 
-      {/* Contenido central */}
       <div className="container max-w-4xl relative z-10">
         <SectionHeader
           title={t("contact.title")}
@@ -100,18 +94,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <Form {...form}>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-6"
-            >
-              {/* Hidden input for Netlify */}
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
-
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
                 control={form.control}
                 name="name"
