@@ -11,14 +11,16 @@ exports.handler = async (event) => {
   try {
     const { name, email, message } = JSON.parse(event.body);
 
-    const transporter = nodemailer.createTransport({
+    // Configura el transporte de nodemailer con Gmail
+    let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.CONTACT_EMAIL,   // debe ser: heliosracedev@gmail.com
-        pass: process.env.EMAIL_PASS,      // contraseña de aplicación
+        user: process.env.CONTACT_EMAIL,      // ✅ correcto
+        pass: process.env.EMAIL_PASS,         // ✅ corregido aquí (antes decía CONTACT_EMAIL_PASS)
       },
     });
 
+    // Contenido del correo
     await transporter.sendMail({
       from: `"HeliosRace Contact" <${email}>`,
       to: process.env.CONTACT_EMAIL,

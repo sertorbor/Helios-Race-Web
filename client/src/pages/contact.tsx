@@ -17,6 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/lib/use-language";
 import { z } from "zod";
 
+// Validación de campos
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
@@ -40,19 +41,23 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      const res = await fetch("/.netlify/functions/formularioContacto", {
+      const response = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Request failed");
-
-      toast({
-        title: t("contact.successTitle"),
-        description: t("contact.successDescription"),
-      });
-      form.reset();
+      if (response.ok) {
+        toast({
+          title: t("contact.successTitle"),
+          description: t("contact.successDescription"),
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send");
+      }
     } catch (error) {
       toast({
         title: t("contact.errorTitle"),
@@ -63,6 +68,7 @@ export default function Contact() {
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
+      {/* Imagen izquierda */}
       <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -71,6 +77,7 @@ export default function Contact() {
         />
       </div>
 
+      {/* Imagen derecha */}
       <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
@@ -79,6 +86,7 @@ export default function Contact() {
         />
       </div>
 
+      {/* Contenido central */}
       <div className="container max-w-4xl relative z-10">
         <SectionHeader
           title={t("contact.title")}
@@ -94,7 +102,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-6"
+            >
               <FormField
                 control={form.control}
                 name="name"
