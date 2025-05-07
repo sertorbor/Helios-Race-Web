@@ -38,7 +38,7 @@ export default function Partners() {
           <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
             {t('partners.becomePartner.text')}
           </p>
-          <Button asChild size="lg" className="bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400">
+          <Button asChild size="lg" className="bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 rounded-xl">
             <Link href="/contact">{t('partners.becomePartner.title')}</Link>
           </Button>
         </motion.div>

@@ -141,7 +141,7 @@ export default function Team() {
         </motion.div>
 
         {/* 📸 Miembros del equipo */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-center mt-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12 justify-center mt-10">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -157,7 +157,7 @@ export default function Team() {
                 rel="noopener noreferrer"
                 className="block transition-transform hover:scale-105 text-center"
               >
-                <div className="relative w-60 h-60 rounded-full shadow-[0_0_10px_4px_rgba(255,190,0,2)] transition-all duration-500 group hover:shadow-[0_0_0_4px_rgba(255,215,0,0.7)]">
+                <div className="relative w-24 h-24 md:w-60 md:h-60 rounded-full shadow-[0_0_10px_4px_rgba(255,190,0,2)] transition-all duration-500 group hover:shadow-[0_0_0_4px_rgba(255,215,0,0.7)]">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -165,8 +165,8 @@ export default function Team() {
                   />
                 </div>
               </a>
-              <h3 className="text-xl font-bold mt-5">{member.name}</h3>
-              <p className="text-gray-500">{member.role}</p>
+              <h3 className="text-sm md:text-xl font-bold mt-2 md:mt-5">{member.name}</h3>
+              <p className="text-xs md:text-base text-gray-500">{member.role}</p>
             </motion.div>
           ))}
         </div>

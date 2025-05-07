@@ -83,7 +83,7 @@ export default function Join() {
             transition={{ duration: 0.6 }}
             className="relative flex flex-col items-center justify-center"
           >
-            <div className="relative w-[1000px] h-[500px]">
+            <div className="relative w-[800px] md:w-[700px] h-[300px] lg:w-[1000px] h-[400px] md:h-[450px] lg:h-[500px]">
               <img
                 src={backgroundImage}
                 alt="Background"
