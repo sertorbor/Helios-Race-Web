@@ -32,6 +32,12 @@ export default function Navbar() {
   const toggleLanguage = () => setLanguage(language === 'en' ? 'es' : 'en');
   const FlagIcon = language === 'en' ? GB : ES;
 
+  // Modificar la función scrollToTop para que también cierre el menú
+  const handleNavigation = () => {
+    scrollToTop();
+    setIsOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#121620] to-[#2a2f3d]/80 backdrop-blur-md shadow-md transition-all duration-300">
       <div className="container flex h-[74px] items-center justify-between">
@@ -52,7 +58,7 @@ export default function Navbar() {
             <SheetContent className="w-[260px] sm:w-[320px] bg-[#1a1f2e] text-white ">
               <nav className="flex flex-col gap-4 mt-6">
                 {navLinks.map((link) => (
-                  <Link key={link.href} href={link.href} onClick={scrollToTop}>
+                  <Link key={link.href} href={link.href} onClick={handleNavigation}>
                     <span
                       className={`cursor-pointer text-xl font-semibold transition-all duration-300 hover:scale-105 font-inter relative 
                         ${

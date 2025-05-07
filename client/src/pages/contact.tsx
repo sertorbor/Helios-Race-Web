@@ -69,19 +69,20 @@ export default function Contact() {
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
-      {/* Fondo decorativo */}
-      <div className="absolute -left-[550px] -top-[550px] w-[900px] h-[900px] transform -rotate-45 opacity-100">
+      {/* Imagen izquierda - Ajustada para móvil */}
+      <div className="absolute -left-[250px] md:-left-[550px] -top-[250px] md:-top-[550px] w-[400px] md:w-[900px] h-[400px] md:h-[900px] transform -rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
           alt="Decorative left"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60 md:opacity-100"
         />
       </div>
-      <div className="absolute -right-[550px] -bottom-[550px] w-[900px] h-[900px] transform rotate-45 opacity-100">
+      {/* Imagen derecha - Ajustada para móvil */}
+      <div className="absolute -right-[250px] md:-right-[550px] -bottom-[250px] md:-bottom-[550px] w-[400px] md:w-[900px] h-[400px] md:h-[900px] transform rotate-45 opacity-100">
         <img
           src="https://images.unsplash.com/photo-1536408745983-0f03be6e8a00"
           alt="Decorative right"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60 md:opacity-100"
         />
       </div>
 
@@ -162,7 +163,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+                className="w-full bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 rounded-xl"
               >
                 {t("contact.submitButton")}
               </Button>
