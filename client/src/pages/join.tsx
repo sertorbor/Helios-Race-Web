@@ -98,7 +98,7 @@ export default function Join() {
                 </p>
                 <Button
                   size="lg"
-                  className="button-primary w-[350px] bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 mt-[-30px]"
+                  className="button-primary w-[350px] bg-white text-black border border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 mt-[-30px] rounded-xl"
                   onClick={() =>
                     window.open(
                       "https://docs.google.com/forms/d/e/1FAIpQLSedJuHKW4hCQqV1TB4QSJQvr5TFFCX7OlC7L_D-3MxDpIyKuw/alreadyresponded",

@@ -72,7 +72,7 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              className="font-bold bg-yellow-500 text-black hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105"
+              className="font-bold bg-yellow-500 text-black hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105 rounded-xl"
             >
               <Link href="/about">{t("hero.learnMore")}</Link>
             </Button>
@@ -81,7 +81,7 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              className="font-bold border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
+              className="font-bold border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 rounded-xl"
             >
               <Link href="/join">{t("hero.joinTeam")}</Link>
             </Button>
@@ -90,8 +90,10 @@ export default function Hero() {
       </div>
 
       {/* ⏳ Contador de cuenta regresiva */}
-      <div className="relative z-10 mb-10">
-        <Countdown />
+      <div className="relative z-10 mb-10 w-full px-4 md:px-0">
+        <div className="mx-auto md:mx-0 md:-ml-20 max-w-4xl"> {/* Ajustado para alinear a la izquierda en desktop */}
+          <Countdown />
+        </div>
       </div>
     </div>
   );
