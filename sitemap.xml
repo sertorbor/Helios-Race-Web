@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página de inicio -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Vehículos - Alta prioridad por ser el contenido principal sobre el coche solar -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/vehicles</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Equipo - También relevante para mostrar los miembros -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/team</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Sobre nosotros - Información clave del proyecto -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/about</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Patrocinadores - Importante para visibilidad de partners -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/partners</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Unirse al equipo - Para captar nuevos miembros -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/join</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contacto - Para comunicación -->
+  <url>
+    <loc>https://heliosraceupv.netlify.app/contact</loc>
+    <lastmod>2025-5-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

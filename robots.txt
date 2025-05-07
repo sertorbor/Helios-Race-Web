@@ -1,0 +1,59 @@
+# Robots.txt para Helios Race UPV - Equipo de competición de vehículos solares
+# Última actualización: [fecha actual]
+
+# Permitir acceso a todos los buscadores
+User-agent: *
+
+# Permitir acceso a todas las páginas principales
+Allow: /
+Allow: /about/
+Allow: /vehicles/
+Allow: /team/
+Allow: /partners/
+Allow: /competitions/
+Allow: /gallery/
+Allow: /news/
+Allow: /solar-technology/
+Allow: /contact/
+Allow: /join-us/
+Allow: /es/
+Allow: /en/
+
+# Bloquear área de desarrollo/pruebas (si existe)
+Disallow: /dev/
+Disallow: /test/
+Disallow: /admin/
+
+# Bloquear archivos no relevantes para indexación
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# No indexar páginas duplicadas o versiones impresas
+Disallow: /print/
+Disallow: /pdf/
+
+# Optimizaciones específicas para Google
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# Optimizaciones para imágenes (importante para las fotos del vehículo)
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /gallery/
+Allow: /vehicles/
+Allow: /competitions/
+
+# Optimizaciones para vídeos (demostraciones del vehículo)
+User-agent: Googlebot-Video
+Allow: /videos/
+Allow: /media/
+
+# Indicar ubicación del sitemap
+Sitemap: https://heliosraceupv.netlify.app/sitemap.xml
+
+# Tiempo de rastreo (opcional - ajustar según necesidad)
+Crawl-delay: 1
