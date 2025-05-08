@@ -119,7 +119,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="relative h-[400px] w-[600px] rounded-3xl overflow-hidden md:order-2 order-1 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl md:ml-auto"
+            className="relative h-[400px] w-full md:w-[600px] rounded-3xl overflow-hidden md:order-2 order-1 shadow-lg hover:shadow-xl transition-shadow duration-300 md:ml-auto"
           >
             <img
               src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
