@@ -18,7 +18,7 @@ export default function Vehicle2() {
         {/* Botón de volver a la página anterior */}
         <Button
           onClick={() => setLocation('/vehicles')}
-          className="absolute top-0 right-8 mt-4 mr-4 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+          className="absolute top-0 right-8 mt-4 mr-4 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 rounded-xl"
         >
           {t('vehicles.back')}
         </Button>

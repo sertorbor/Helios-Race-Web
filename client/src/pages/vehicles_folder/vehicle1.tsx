@@ -2,9 +2,9 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
-import Foto1 from "@/assets/foto1.jpg";
-import Foto2 from "@/assets/foto1.jpg";
-import Foto3 from "@/assets/foto1.jpg";
+import Foto1 from "@/assets/Prot1FishEye.png";
+import Foto2 from "@/assets/Prototipo1.jpeg";
+import Foto3 from "@/assets/Prot1Up.png";
 import { useLanguage } from "@/lib/use-language";
 
 export default function Vehicle1() {
@@ -18,7 +18,7 @@ export default function Vehicle1() {
         {/* Botón de volver a la página anterior */}
         <Button
           onClick={() => setLocation('/vehicles')}
-          className="absolute top-0 right-8 mt-4 mr-4 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+          className="absolute top-0 right-8 mt-4 mr-4 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 rounded-xl"
         >
           {t('vehicles.back')}
         </Button>
@@ -36,7 +36,7 @@ export default function Vehicle1() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="order-1 md:order-2 relative h-[400px] rounded-xl overflow-hidden shadow-lg"
+            className="order-1 md:order-2 relative h-[390px] rounded-xl overflow-hidden shadow-lg"
           >
             <img src={Foto1} alt={t('vehicles1.prototype1.design.alt')} className="absolute inset-0 w-full h-full object-cover" />
           </motion.div>
@@ -62,7 +62,7 @@ export default function Vehicle1() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
+            className="relative h-[390px] rounded-xl overflow-hidden shadow-lg"
           >
             <img src={Foto2} alt={t('vehicles1.prototype1.components.alt')} className="absolute inset-0 w-full h-full object-cover" />
           </motion.div>
@@ -87,7 +87,7 @@ export default function Vehicle1() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="order-1 md:order-2 relative h-[400px] rounded-xl overflow-hidden shadow-lg"
+            className="order-1 md:order-2 relative h-[390px] rounded-xl overflow-hidden shadow-lg"
           >
             <img src={Foto3} alt={t('vehicles1.prototype1.achievements.alt')} className="absolute inset-0 w-full h-full object-cover" />
           </motion.div>

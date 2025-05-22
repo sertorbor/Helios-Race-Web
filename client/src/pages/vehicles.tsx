@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
-import CocheUno from "@/assets/Prototipo1.jpeg";
+import CocheUno from "@/assets/Prot1Left.png";
 import CocheDos from "@/assets/foto1.jpg";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/use-language";
@@ -24,13 +24,13 @@ export default function Vehicles() {
         <div className="text-center mb-12">
           <SectionHeader 
             title={t('vehicles.title')} 
-            titleClassName="text-4xl font-extrabold text-gray-900 -mb-8"
+            titleClassName="text-4xl font-extrabold text-gray-900 -mb-8 pb-16"
           />
         </div>
 
         {/* Prototipo 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+          <div className="relative h-[385px] rounded-xl overflow-hidden shadow-lg">
             <img src={CocheUno} alt={t('vehicles.prototype1.title')} className="absolute inset-0 w-full h-full object-cover" />
           </div>
 
@@ -51,7 +51,7 @@ export default function Vehicles() {
             <Link href="/vehicles/vehicle1" onClick={scrollToTop}>
               <Button
                 size="lg"
-                className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+                className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400 rounded-xl"
               >
                 {t('vehicles.learnMore')}
               </Button>
@@ -75,13 +75,17 @@ export default function Vehicles() {
               {t('vehicles.prototype2.description1')}
             </p>
 
-            <Link href="/vehicles/vehicle2" onClick={scrollToTop}>
+            <Link href="/vehicles">
+            
               <Button
                 size="lg"
-                className="mt-6 bg-white text-black border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400"
+                style={{ cursor: 'not-allowed'}}
+                className="mt-6 bg-white text-black border-2 border-orange-500 bg-orange-500 text-black transition-all duration-300 transform hover:scale-105 hover:bg-orange-500 shadow-lg hover:shadow-red-400 rounded-xl"
+                
               >
-                {t('vehicles.learnMore')}
+                {t('vehicle2.learnMore')}
               </Button>
+              
             </Link>
           </motion.div>
 
