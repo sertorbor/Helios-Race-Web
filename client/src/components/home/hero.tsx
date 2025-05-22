@@ -54,10 +54,10 @@ export default function Hero() {
             className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed"
             dangerouslySetInnerHTML={{
               __html: t("hero.subtitle")
-                .replace("solar-powered mobility", <span class="text-yellow-300 font-semibold">solar-powered mobility</span>)
-                .replace("sustainable innovation", <span class="text-yellow-300 font-semibold">sustainable innovation</span>)
-                .replace("movilidad solar", <span class="text-yellow-300 font-semibold">movilidad solar</span>)
-                .replace("innovación sostenible", <span class="text-yellow-300 font-semibold">innovación sostenible</span>)
+                .replace("solar-powered mobility", '<span class="text-yellow-300 font-semibold">solar-powered mobility</span>')
+                .replace("sustainable innovation", '<span class="text-yellow-300 font-semibold">sustainable innovation</span>')
+                .replace("movilidad solar", '<span class="text-yellow-300 font-semibold">movilidad solar</span>')
+                .replace("innovación sostenible", '<span class="text-yellow-300 font-semibold">innovación sostenible</span>')
             }}
           />
 
