@@ -42,22 +42,22 @@ export default function Countdown() {
 
       <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
         {/* Días */}
-        <div className="bg-white text-black rounded-lg p-2 md:p-4 text-center shadow-lg">
+        <div className="bg-white text-black rounded-xl p-2 md:p-4 text-center shadow-lg">
           <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold">{timeLeft.days}</div>
           <div className="text-xs md:text-sm lg:text-lg font-semibold">{t('countdown.days')}</div>
         </div>
         {/* Horas */}
-        <div className="bg-white text-black rounded-lg p-2 md:p-4 text-center shadow-lg">
+        <div className="bg-white text-black rounded-xl p-2 md:p-4 text-center shadow-lg">
           <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold">{timeLeft.hours}</div>
           <div className="text-xs md:text-sm lg:text-lg font-semibold">{t('countdown.hours')}</div>
         </div>
         {/* Minutos */}
-        <div className="bg-white text-black rounded-lg p-2 md:p-4 text-center shadow-lg">
+        <div className="bg-white text-black rounded-xl p-2 md:p-4 text-center shadow-lg">
           <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold">{timeLeft.minutes}</div>
           <div className="text-xs md:text-sm lg:text-lg font-semibold">{t('countdown.minutes')}</div>
         </div>
         {/* Segundos */}
-        <div className="bg-white text-black rounded-lg p-2 md:p-4 text-center shadow-lg">
+        <div className="bg-white text-black rounded-xl p-2 md:p-4 text-center shadow-lg">
           <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold">{timeLeft.seconds}</div>
           <div className="text-xs md:text-sm lg:text-lg font-semibold">{t('countdown.seconds')}</div>
         </div>

@@ -32,7 +32,6 @@ export default function Navbar() {
   const toggleLanguage = () => setLanguage(language === 'en' ? 'es' : 'en');
   const FlagIcon = language === 'en' ? GB : ES;
 
-  // Modificar la función scrollToTop para que también cierre el menú
   const handleNavigation = () => {
     scrollToTop();
     setIsOpen(false);
@@ -41,7 +40,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#121620] to-[#2a2f3d]/80 backdrop-blur-md shadow-md transition-all duration-300">
       <div className="container flex h-[74px] items-center justify-between">
-        
+
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
           <img src={logo} alt="HeliosRace UPV Logo" className="h-[60px] w-auto" />
@@ -55,7 +54,7 @@ export default function Navbar() {
                 <Menu className="h-6 w-6 text-white transition-transform duration-300 hover:scale-110" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-[260px] sm:w-[320px] bg-[#1a1f2e] text-white ">
+            <SheetContent className="w-[260px] sm:w-[320px] bg-[#1a1f2e] text-white">
               <nav className="flex flex-col gap-4 mt-6">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href} onClick={handleNavigation}>
@@ -76,7 +75,7 @@ export default function Navbar() {
                 <Button
                   variant="ghost"
                   onClick={toggleLanguage}
-                  className="flex items-center gap-2 text-xl font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 text-xl font-semibold text-gray-300 hover:text-black hover:bg-yellow-400 transition-all duration-300 rounded-xl px-3 py-2"
                 >
                   <FlagIcon className="h-5 w-5" />
                   {language.toUpperCase()}
@@ -107,7 +106,7 @@ export default function Navbar() {
             <Button
               variant="ghost"
               onClick={toggleLanguage}
-              className="flex items-center gap-2 text-xl font-semibold text-gray-300 hover:text-white transition-all duration-300 hover:scale-105"
+              className="flex items-center gap-2 text-xl font-semibold text-gray-300 hover:text-white hover:bg-yellow-400 transition-all duration-300 rounded-xl px-4 py-2"
             >
               <FlagIcon className="h-6 w-6" />
               {language.toUpperCase()}
