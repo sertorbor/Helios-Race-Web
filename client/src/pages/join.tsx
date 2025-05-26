@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/use-language";
 import SectionHeader from "@/components/shared/section-header";
 import { Button } from "@/components/ui/button";
 import foto1 from "@/assets/trespose.jpg";
-import foto2 from "@/assets/trespose.jpg";
+import foto2 from "@/assets/foto1.jpg";
 import foto3 from "@/assets/trespose.jpg";
 import foto4 from "@/assets/trespose.jpg";
 import foto5 from "@/assets/trespose.jpg";

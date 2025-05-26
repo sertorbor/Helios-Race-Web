@@ -28,6 +28,26 @@ export default function Hero() {
         }}
       />
 
+      {/* EN CASO DE QUERER PONER UN VIDEO DESCOMENTAR LO SIGUIENTE:
+      
+        <div className="absolute inset-0 z-0 bg-cover bg-no-repeat">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="https://your-video-url.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-[#101217] via-[#101217]/95 to-transparent"
+          ></div>
+        </div>
+
+      */}
+
       {/* 📌 Contenedor principal */}
       <div className="container relative z-10 flex-grow flex items-center pb-18">
         <motion.div

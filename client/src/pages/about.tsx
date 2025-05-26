@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
 import mision from "@/assets/trespose.jpg";
+import vision from "@/assets/showtopublic.jpg";
 import CompetiPeq1 from "@/assets/trespose.jpg";
 import CompetiPeq2 from "@/assets/trespose.jpg";
 import Innovacion from "@/assets/engranaje.png";
@@ -65,7 +66,7 @@ export default function About() {
             className="relative h-[400px] rounded-3xl overflow-hidden shadow-xl md:order-1 order-2 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+              src={vision}
               alt="Team Working"
               className="absolute inset-0 w-full h-full object-cover shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
             />
