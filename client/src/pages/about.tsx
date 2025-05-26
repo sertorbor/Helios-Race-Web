@@ -3,8 +3,10 @@ import SectionHeader from "@/components/shared/section-header";
 import { useLanguage } from "@/lib/use-language";
 import mision from "@/assets/trespose.jpg";
 import vision from "@/assets/showtopublic.jpg";
-import CompetiPeq1 from "@/assets/trespose.jpg";
-import CompetiPeq2 from "@/assets/trespose.jpg";
+import valores from "@/assets/PlacaMaking.jpg";
+import CompetiBig from "@/assets/CarinMaking.jpg";
+import CompetiPeq1 from "@/assets/BatPc.png";
+import CompetiPeq2 from "@/assets/machine.png";
 import Innovacion from "@/assets/engranaje.png";
 import Teamwork from "@/assets/Teamwork.png";
 import Sostenibilidad from "@/assets/leave.png";
@@ -123,7 +125,7 @@ export default function About() {
             className="relative h-[400px] w-full md:w-[600px] rounded-3xl overflow-hidden md:order-2 order-1 shadow-lg hover:shadow-xl transition-shadow duration-300 md:ml-auto"
           >
             <img
-              src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+              src={valores}
               alt="Team Working"
               className="absolute inset-0 w-full h-full object-cover shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
             />
@@ -151,9 +153,9 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 my-[100px]">
               <div className="text-center">
                 <img
-                  src="https://images.unsplash.com/photo-1522198648249-0657d7ff242a"
+                  src={CompetiBig}
                   alt="Imagen Competicion"
-                  className="w-4/5 h-auto rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
+                  className="absolute w-[600px] h-[500px] rounded-3xl mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl"
                 />
               </div>
               <div>
@@ -164,12 +166,12 @@ export default function About() {
                   <img
                     src={CompetiPeq1}
                     alt="Imagen 3"
-                    className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className=" w-[400px] h-[250px] rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                   />
                   <img
                     src={CompetiPeq2}
                     alt="Imagen 4"
-                    className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="relative w-full h-[250px] rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                   />
                 </div>
               </div>
