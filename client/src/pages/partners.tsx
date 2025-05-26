@@ -17,7 +17,7 @@ export default function Partners() {
     { image: logoGE, url: "https://generacionespontanea.upv.es" },
     { image: logo, url: "https://www.autoprieto.com" },
     { image: logoFord, url: "https://www.ford.com" },
-    { image: logoWurth, url: "https://www.we-online.com" },
+    //{ image: logoWurth, url: "https://www.we-online.com" },
   ];
 
   return (

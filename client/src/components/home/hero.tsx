@@ -90,7 +90,7 @@ export default function Hero() {
       </div>
 
       {/* ⏳ Contador de cuenta regresiva */}
-      <div className="relative z-10 mb-16 w-full px-4 md:px-0">
+      <div className="relative z-10 mt-16 mb-16 w-full px-4 md:px-0">
         <div className="mx-auto md:mx-0 md:-ml-[50px] max-w-3xl">
           <Countdown />
         </div>

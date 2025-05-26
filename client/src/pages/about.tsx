@@ -8,7 +8,7 @@ import Innovacion from "@/assets/engranaje.png";
 import Teamwork from "@/assets/Teamwork.png";
 import Sostenibilidad from "@/assets/leave.png";
 import Compromiso from "@/assets/engranaje.png";
-import BackgroundImage from "@/assets/circuito.jpg";
+import BackgroundImage from "@/assets/Asfalt.jpg";
 
 
 export default function About() {
@@ -25,7 +25,7 @@ export default function About() {
 
 
         {/* 🔹 Línea Divisoria */}
-        <div className="w-full my-[110px]">
+        <div className="w-full my-[60px] md:my-[110px]">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
         </div>
 
@@ -130,14 +130,14 @@ export default function About() {
         </div>
 
         {/* 🔹 Línea Divisoria */}
-        <div className="w-full my-[110px]">
+        <div className="w-full my-[60px] md:my-[110px]">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
         </div>
       </div>
 
       {/* Subapartado COMPETICIÓN */}
       <div className="relative w-full">
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60 background-fade" style={{ backgroundImage: `url(${BackgroundImage})` }}></div>
+        {/*<div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-100 background-fade" style={{ backgroundImage: `url(${BackgroundImage})` }}></div>*/}
         <div className="relative z-10 container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="mt-16 text-center h-[600px] w-full"
           >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px] font-permanent-marker">{t("about.competition.title")}</h2>            
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 my-[100px] ">{t("about.competition.title")}</h2>            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 my-[100px]">
               <div className="text-center">
                 <img
@@ -180,7 +180,7 @@ export default function About() {
       <div className="container">
         
         {/* 🔹 Línea Divisoria */}
-        <div className="w-full my-[110px]">
+        <div className="w-full my-[180px] md:my-[110px]">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
         </div>
 

@@ -30,8 +30,12 @@ export default function Vehicles() {
 
         {/* Prototipo 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[385px] rounded-xl overflow-hidden shadow-lg">
-            <img src={CocheUno} alt={t('vehicles.prototype1.title')} className="absolute inset-0 w-full h-full object-cover" />
+          <div className="relative h-[200px] md:h-[385px] rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={CocheUno}
+              alt={t('vehicles.prototype1.title')}
+              className="absolute inset-0 w-[800px] h-full object-cover"
+            />
           </div>
 
           <motion.div
@@ -76,21 +80,22 @@ export default function Vehicles() {
             </p>
 
             <Link href="/vehicles">
-            
               <Button
                 size="lg"
-                style={{ cursor: 'not-allowed'}}
+                style={{ cursor: 'not-allowed' }}
                 className="mt-6 bg-white text-black border-2 border-orange-500 bg-orange-500 text-black transition-all duration-300 transform hover:scale-105 hover:bg-orange-500 shadow-lg hover:shadow-red-400 rounded-xl"
-                
               >
                 {t('vehicle2.learnMore')}
               </Button>
-              
             </Link>
           </motion.div>
 
-          <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
-            <img src={CocheDos} alt={t('vehicles.prototype2.title')} className="absolute inset-0 w-full h-full object-cover" />
+          <div className="relative h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
+            <img
+              src={CocheDos}
+              alt={t('vehicles.prototype2.title')}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
         </div>
 

@@ -165,8 +165,8 @@ export default function Team() {
                   />
                 </div>
               </a>
-              <h3 className="text-sm md:text-xl font-bold mt-2 md:mt-5">{member.name}</h3>
-              <p className="text-xs md:text-base text-gray-500">{member.role}</p>
+              <h3 className="text-sm md:text-xl font-bold mt-2 md:mt-5 text-center">{member.name}</h3>
+              <p className="text-xs md:text-base text-gray-500 text-center">{member.role}</p>
             </motion.div>
           ))}
         </div>

@@ -83,7 +83,7 @@ export default function Join() {
             transition={{ duration: 0.6 }}
             className="relative flex flex-col items-center justify-center"
           >
-            <div className="relative w-[800px] md:w-[700px] h-[300px] lg:w-[1000px] h-[400px] md:h-[450px] lg:h-[500px]">
+            <div className="relative w-[600px] md:w-[700px] h-[300px] lg:w-[1000px] h-[250px] md:h-[450px] lg:h-[500px]">
               <img
                 src={backgroundImage}
                 alt="Background"
@@ -93,7 +93,7 @@ export default function Join() {
                 <h3 className="text-2xl font-bold -mb-3 text-black my-16">
                   {t("join.titlend")}
                 </h3>
-                <p className="text-gray mb-8 text-center max-w-md">
+                <p className="text-gray mb-8 text-center max-w-[300px] md:max-w-md">
                   {t("join.description")}
                 </p>
                 <Button
