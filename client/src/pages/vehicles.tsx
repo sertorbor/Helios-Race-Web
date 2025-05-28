@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/shared/section-header";
 import CocheUno from "@/assets/Prot1Left.png";
-import CocheDos from "@/assets/foto1.jpg";
+import CocheDos from "@/assets/Unveilingchh.png";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/use-language";
 
