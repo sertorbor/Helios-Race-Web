@@ -38,6 +38,7 @@ export default function Contact() {
     },
   });
 
+  {/*
   const onSubmit = async (data: ContactFormData) => {
     try {
       const response = await fetch("/.netlify/functions/formularioContacto", {
@@ -66,6 +67,40 @@ export default function Contact() {
       });
     }
   };
+  */}
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      // Creamos los datos en el formato que Netlify espera
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      
+      // Enviar el formulario directamente, sin usar la función serverless
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      
+      if (response.ok) {
+        toast({
+          title: t("contact.successTitle"),
+          description: t("contact.successDescription"),
+        });
+        form.reset();
+      } else {
+        throw new Error("Error al enviar");
+      }
+    } catch (error) {
+      toast({
+        title: t("contact.errorTitle"),
+        description: t("contact.errorDescription"),
+      });
+    }
+  };
+  
 
   return (
     <div className="py-16 md:py-16 relative overflow-hidden">
@@ -105,7 +140,16 @@ export default function Contact() {
             <form
               onSubmit={form.handleSubmit(onSubmit)}
               className="space-y-6"
+              name="contacto"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              // Añadimos estos atributos para Netlify Forms
             >
+              {/* Campo oculto necesario para Netlify Forms con React */}
+              <input type="hidden" name="form-name" value="contacto" />
+              <input type="hidden" name="bot-field" />
+              
+              {/* El resto de tu formulario permanece igual */}
               <FormField
                 control={form.control}
                 name="name"
